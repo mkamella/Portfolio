@@ -1,4 +1,4 @@
-interface StatBlockProps {
+export interface StatBlockProps {
   value: string
   label: string
 }
