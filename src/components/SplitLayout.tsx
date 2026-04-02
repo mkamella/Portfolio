@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
+
 interface SplitLayoutProps {
-  left: React.ReactNode
-  right: React.ReactNode
+  left: ReactNode
+  right: ReactNode
 }
 
 export default function SplitLayout({ left, right }: SplitLayoutProps) {
