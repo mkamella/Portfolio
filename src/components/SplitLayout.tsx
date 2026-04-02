@@ -7,19 +7,19 @@ interface SplitLayoutProps {
 
 export default function SplitLayout({ left, right }: SplitLayoutProps) {
   return (
-    <div className="flex h-screen overflow-hidden">
+    <>
       <aside
         data-panel="left"
-        className="w-60 flex-shrink-0 bg-cream-dark flex flex-col overflow-y-auto"
+        className="fixed top-0 left-0 h-screen w-60 bg-cream-dark flex flex-col overflow-y-auto z-10"
       >
         {left}
       </aside>
       <main
         data-panel="right"
-        className="flex-1 bg-white overflow-y-auto"
+        className="ml-60"
       >
         {right}
       </main>
-    </div>
+    </>
   )
 }

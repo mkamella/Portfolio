@@ -24,4 +24,23 @@ describe('HomePage', () => {
     render(<HomePage />)
     expect(screen.getByText(/scroll/i)).toBeInTheDocument()
   })
+
+  it('renders the about section', () => {
+    render(<HomePage />)
+    expect(screen.getByText(/designing seamless experiences/i)).toBeInTheDocument()
+    expect(screen.getByText(/years/i)).toBeInTheDocument()
+  })
+
+  it('renders the work section with case study rows', () => {
+    render(<HomePage />)
+    expect(screen.getByText(/\d+ projects/i)).toBeInTheDocument()
+    expect(screen.getByText('DESIGNING THE FIRST STEP TOWARD THERAPY')).toBeInTheDocument()
+  })
+
+  it('renders the contact section', () => {
+    render(<HomePage />)
+    expect(screen.getByText(/let's work/i)).toBeInTheDocument()
+    const emailLink = screen.getByRole('link', { name: /email/i })
+    expect(emailLink.getAttribute('href')).toMatch(/^mailto:/)
+  })
 })

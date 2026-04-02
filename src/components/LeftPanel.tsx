@@ -2,10 +2,10 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 
 const NAV_ITEMS = [
-  { num: '01', label: 'Home', href: '/' },
-  { num: '02', label: 'About', href: '/about' },
-  { num: '03', label: 'Work', href: '/work' },
-  { num: '04', label: 'Contact', href: '/contact' },
+  { num: '01', label: 'Home', href: '/#home' },
+  { num: '02', label: 'About', href: '/#about' },
+  { num: '03', label: 'Work', href: '/#work' },
+  { num: '04', label: 'Contact', href: '/#contact' },
 ] as const
 
 type Section = 'home' | 'about' | 'work' | 'contact'
@@ -19,7 +19,7 @@ export default function LeftPanel({ activeSection, footer }: LeftPanelProps) {
   return (
     <div className="flex flex-col h-full p-7">
       {/* Brand */}
-      <Link href="/" className="block">
+      <Link href="/#home" className="block">
         <div className="font-black text-base uppercase tracking-tighter leading-none text-ink">
           <span>Mikey</span><br /><span>Amella</span>
         </div>
