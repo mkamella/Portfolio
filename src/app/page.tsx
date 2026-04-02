@@ -11,6 +11,14 @@ import { useActiveSection } from '@/hooks/useActiveSection'
 const SECTIONS = ['home', 'about', 'work', 'contact']
 const TOOLS = ['Figma', 'Miro', 'Axure', 'GitHub', 'Claude']
 
+const BLOB_KEYFRAMES = [
+  '60% 40% 30% 70% / 60% 30% 70% 40%',
+  '30% 60% 70% 40% / 50% 60% 30% 60%',
+  '50% 40% 60% 30% / 40% 60% 50% 40%',
+  '40% 60% 40% 60% / 60% 40% 60% 40%',
+  '60% 40% 30% 70% / 60% 30% 70% 40%',
+]
+
 export default function HomePage() {
   const activeSection = useActiveSection(SECTIONS) as 'home' | 'about' | 'work' | 'contact'
 
@@ -39,13 +47,14 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen flex flex-col justify-between px-11 py-12 bg-white">
+          <section id="home" className="h-screen flex flex-col px-11 py-12 bg-white">
             <p className="text-[9px] text-muted uppercase tracking-widest">
               UX Designer — Portfolio 2025
             </p>
 
-            <div className="flex items-end gap-8">
-              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em]">
+            {/* Name + blob image */}
+            <div className="flex-1 flex items-center justify-between gap-6">
+              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em] flex-shrink-0">
                 {['MIKEY', 'AMELLA'].map((word, i) => (
                   <motion.span
                     key={word}
@@ -60,20 +69,23 @@ export default function HomePage() {
               </h1>
 
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                className="mb-4"
+                className="overflow-hidden bg-cream-dark"
+                style={{
+                  width: '48%',
+                  height: '68vh',
+                  borderRadius: BLOB_KEYFRAMES[0],
+                }}
+                animate={{
+                  y: [0, -14, 0],
+                  borderRadius: BLOB_KEYFRAMES,
+                }}
+                transition={{ repeat: Infinity, duration: 9, ease: 'easeInOut' }}
               >
-                <div
-                  className="w-32 h-44 overflow-hidden bg-cream-dark border-4 border-cream"
-                  style={{ borderRadius: '50%' }}
-                >
-                  <img
-                    src="/images/Portfolio Header Image.png"
-                    alt="Mikey Amella"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <img
+                  src="/images/Portfolio Header Image.png"
+                  alt="Mikey Amella"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
             </div>
 
@@ -86,14 +98,37 @@ export default function HomePage() {
           </section>
 
           {/* ABOUT */}
-          <section id="about" className="min-h-screen flex flex-col gap-6 px-11 py-20 bg-cream">
+          <section id="about" className="min-h-screen flex flex-col gap-8 px-11 py-20 bg-cream">
             <h2 className="font-black text-4xl text-ink uppercase tracking-tighter leading-tight">
               Designing seamless experiences,<br />one pixel at a time.
             </h2>
             <div className="h-px bg-subtle" />
 
             <div className="flex gap-10 items-start">
-              <div className="flex flex-col gap-4 text-sm text-muted leading-relaxed flex-1">
+              {/* Image — large, left */}
+              <div className="flex flex-col items-center gap-3" style={{ flexBasis: '42%', flexShrink: 0 }}>
+                <motion.div
+                  className="w-full overflow-hidden bg-cream-dark"
+                  style={{
+                    height: '58vh',
+                    borderRadius: BLOB_KEYFRAMES[0],
+                  }}
+                  animate={{ borderRadius: BLOB_KEYFRAMES }}
+                  transition={{ repeat: Infinity, duration: 11, ease: 'easeInOut' }}
+                >
+                  <img
+                    src="/images/about me picture.jpg"
+                    alt="Mikey Amella"
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+                <p className="text-[9px] text-muted uppercase tracking-widest text-center italic">
+                  Creating experiences one pixel at a time.
+                </p>
+              </div>
+
+              {/* Bio — right */}
+              <div className="flex-1 flex flex-col gap-4 text-sm text-muted leading-relaxed pt-2">
                 <p>
                   I&apos;m a UX designer originally from Colorado. My journey started as a computer
                   science major — I loved problem-solving, but my work lacked the visual and
@@ -111,25 +146,9 @@ export default function HomePage() {
                   places — I&apos;m always looking for inspiration in the world around me.
                 </p>
               </div>
-
-              <div className="flex flex-col items-center gap-3 flex-shrink-0">
-                <div
-                  className="w-44 h-60 overflow-hidden bg-cream-dark"
-                  style={{ borderRadius: '50%' }}
-                >
-                  <img
-                    src="/images/about me picture.jpg"
-                    alt="Mikey Amella"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-[9px] text-muted uppercase tracking-widest text-center italic max-w-[160px]">
-                  Creating experiences one pixel at a time.
-                </p>
-              </div>
             </div>
 
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4">
               <StatBlock value="3+" label="Years Experience" />
               <StatBlock value="10+" label="Projects" />
               <StatBlock value="4" label="Case Studies" />
