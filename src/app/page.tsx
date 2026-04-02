@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import SplitLayout from '@/components/SplitLayout'
 import LeftPanel from '@/components/LeftPanel'
 import StatBlock from '@/components/StatBlock'
@@ -8,7 +9,6 @@ import { caseStudies } from '@/data/case-studies'
 import { useActiveSection } from '@/hooks/useActiveSection'
 
 const SECTIONS = ['home', 'about', 'work', 'contact']
-
 const TOOLS = ['Figma', 'Miro', 'Axure', 'GitHub', 'Claude']
 
 export default function HomePage() {
@@ -43,11 +43,41 @@ export default function HomePage() {
             <p className="text-[9px] text-muted uppercase tracking-widest">
               UX Designer — Portfolio 2025
             </p>
-            <div>
+
+            <div className="flex items-end gap-8">
               <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em]">
-                <span>MIKEY</span><br /><span>AMELLA</span>
+                {['MIKEY', 'AMELLA'].map((word, i) => (
+                  <motion.span
+                    key={word}
+                    className="block"
+                    initial={{ y: 80, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.1 + i * 0.18 }}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
               </h1>
+
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                className="mb-4"
+              >
+                <div
+                  className="w-32 h-44 overflow-hidden bg-cream-dark border-4 border-cream"
+                  style={{ borderRadius: '50%' }}
+                >
+                  {/* Add your photo: public/images/header-photo.jpg */}
+                  <img
+                    src="/images/header-photo.jpg"
+                    alt="Mikey Amella"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
             </div>
+
             <div className="flex justify-between items-end">
               <p className="text-sm text-muted leading-relaxed max-w-xs">
                 Crafting human-centered digital experiences that bridge complexity and clarity.
@@ -62,25 +92,46 @@ export default function HomePage() {
               Designing seamless experiences,<br />one pixel at a time.
             </h2>
             <div className="h-px bg-subtle" />
-            <div className="flex flex-col gap-4 text-sm text-muted leading-relaxed max-w-lg">
-              <p>
-                I&apos;m a UX designer originally from Colorado. My journey started as a computer
-                science major — I loved problem-solving, but my work lacked the visual and
-                experiential impact I was searching for. That realization led me to switch schools
-                and majors, where I discovered my passion for UX and product design.
-              </p>
-              <p>
-                I graduated summa cum laude from Arizona State University, earning the Outstanding
-                UX Award and Super Star Award for my contributions to the field. Since then I&apos;ve
-                led redesigns for Fortune 500 travel platforms, healthcare clinics, and non-profits —
-                always focused on turning complexity into clarity.
-              </p>
-              <p>
-                When I&apos;m not designing, you can find me thrifting, hiking, or exploring new
-                places — I&apos;m always looking for inspiration in the world around me.
-              </p>
+
+            <div className="flex gap-10 items-start">
+              <div className="flex flex-col gap-4 text-sm text-muted leading-relaxed flex-1">
+                <p>
+                  I&apos;m a UX designer originally from Colorado. My journey started as a computer
+                  science major — I loved problem-solving, but my work lacked the visual and
+                  experiential impact I was searching for. That realization led me to switch schools
+                  and majors, where I discovered my passion for UX and product design.
+                </p>
+                <p>
+                  I graduated summa cum laude from Arizona State University, earning the Outstanding
+                  UX Award and Super Star Award for my contributions to the field. Since then I&apos;ve
+                  led redesigns for Fortune 500 travel platforms, healthcare clinics, and non-profits —
+                  always focused on turning complexity into clarity.
+                </p>
+                <p>
+                  When I&apos;m not designing, you can find me thrifting, hiking, or exploring new
+                  places — I&apos;m always looking for inspiration in the world around me.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                <div
+                  className="w-44 h-60 overflow-hidden bg-cream-dark"
+                  style={{ borderRadius: '50%' }}
+                >
+                  {/* Add your photo: public/images/about-photo.jpg */}
+                  <img
+                    src="/images/about-photo.jpg"
+                    alt="Mikey Amella"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-[9px] text-muted uppercase tracking-widest text-center italic max-w-[160px]">
+                  Creating experiences one pixel at a time.
+                </p>
+              </div>
             </div>
-            <div className="flex gap-4 mt-8">
+
+            <div className="flex gap-4 mt-4">
               <StatBlock value="3+" label="Years Experience" />
               <StatBlock value="10+" label="Projects" />
               <StatBlock value="4" label="Case Studies" />
@@ -92,7 +143,7 @@ export default function HomePage() {
             <p className="text-[9px] text-muted uppercase tracking-widest mb-8">
               {caseStudies.length} projects
             </p>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-4">
               {caseStudies.map((cs, i) => (
                 <AnimatedCaseStudyRow key={cs.slug} caseStudy={cs} index={i} />
               ))}
