@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import AboutPage from '../page'
 
 vi.mock('next/link', () => ({
-  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
+  default: ({ children, href }: { children: unknown; href: string }) => (
     <a href={href}>{children}</a>
   ),
 }))

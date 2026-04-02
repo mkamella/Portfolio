@@ -4,7 +4,7 @@ import LeftPanel from '../LeftPanel'
 
 // Next.js Link requires a router — mock it
 vi.mock('next/link', () => ({
-  default: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
+  default: ({ children, href, className }: { children: unknown; href: string; className?: string }) => (
     <a href={href} className={className}>{children}</a>
   ),
 }))
