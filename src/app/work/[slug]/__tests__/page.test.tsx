@@ -14,15 +14,15 @@ vi.mock('next/navigation', () => ({
 
 describe('CaseStudyPage', () => {
   it('renders the project title', async () => {
-    const Page = await CaseStudyPage({ params: Promise.resolve({ slug: 'project-one' }) })
+    const Page = await CaseStudyPage({ params: Promise.resolve({ slug: 'peak-psychological' }) })
     render(Page)
-    expect(screen.getByText('Project One')).toBeInTheDocument()
+    expect(screen.getByText('Designing the First Step Toward Therapy')).toBeInTheDocument()
   })
 
   it('renders the overview headline', async () => {
-    const Page = await CaseStudyPage({ params: Promise.resolve({ slug: 'project-one' }) })
+    const Page = await CaseStudyPage({ params: Promise.resolve({ slug: 'peak-psychological' }) })
     render(Page)
-    expect(screen.getByText('The problem nobody talked about.')).toBeInTheDocument()
+    expect(screen.getByText('The first step toward care should feel possible.')).toBeInTheDocument()
   })
 
   it('throws notFound for unknown slug', async () => {

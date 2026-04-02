@@ -15,14 +15,14 @@ export default function ContactPage() {
               </h1>
               <div className="flex flex-col gap-4">
                 <a
-                  href="mailto:mikey@mikeyamella.com"
+                  href="mailto:mkdamella@gmail.com"
                   aria-label="Email Mikey"
                   className="text-base font-medium text-ink border-b-2 border-accent pb-0.5 w-fit hover:text-accent transition-colors"
                 >
-                  mikey@mikeyamella.com
+                  mkdamella@gmail.com
                 </a>
                 <a
-                  href="https://linkedin.com/in/mikeyamella"
+                  href="https://www.linkedin.com/in/mikey-amella/"
                   aria-label="LinkedIn profile"
                   target="_blank"
                   rel="noopener noreferrer"
