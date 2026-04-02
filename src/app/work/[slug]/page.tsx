@@ -3,6 +3,7 @@ import SplitLayout from '@/components/SplitLayout'
 import LeftPanel from '@/components/LeftPanel'
 import StoryProgress from '@/components/StoryProgress'
 import StatBlock from '@/components/StatBlock'
+import PageTransition from '@/components/PageTransition'
 import { caseStudies } from '@/data/case-studies'
 
 const STORY_SECTIONS = ['Overview', 'The Problem', 'Research', 'Solution', 'Impact']
@@ -50,6 +51,7 @@ export default async function CaseStudyPage({ params }: Props) {
         />
       }
       right={
+        <PageTransition>
         <article className="px-11 py-10 flex flex-col gap-14">
           <header>
             <div className="flex flex-wrap gap-1 mb-3">
@@ -118,6 +120,7 @@ export default async function CaseStudyPage({ params }: Props) {
             )}
           </section>
         </article>
+        </PageTransition>
       }
     />
   )
