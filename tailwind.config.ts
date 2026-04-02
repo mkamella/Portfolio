@@ -16,6 +16,7 @@ const config: Config = {
         subtle: '#D5CFC8',
         accent: '#C0654A',
         'accent-light': '#E8A090',
+        white: '#FFFFFF',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
