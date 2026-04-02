@@ -68,9 +68,8 @@ export default function HomePage() {
                   className="w-32 h-44 overflow-hidden bg-cream-dark border-4 border-cream"
                   style={{ borderRadius: '50%' }}
                 >
-                  {/* Add your photo: public/images/header-photo.jpg */}
                   <img
-                    src="/images/header-photo.jpg"
+                    src="/images/Portfolio Header Image.png"
                     alt="Mikey Amella"
                     className="w-full h-full object-cover"
                   />
@@ -118,9 +117,8 @@ export default function HomePage() {
                   className="w-44 h-60 overflow-hidden bg-cream-dark"
                   style={{ borderRadius: '50%' }}
                 >
-                  {/* Add your photo: public/images/about-photo.jpg */}
                   <img
-                    src="/images/about-photo.jpg"
+                    src="/images/about me picture.jpg"
                     alt="Mikey Amella"
                     className="w-full h-full object-cover"
                   />
