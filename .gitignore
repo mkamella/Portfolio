@@ -1,1 +1,19 @@
 .superpowers/
+
+# Next.js
+.next/
+out/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Misc
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# Vercel
+.vercel
