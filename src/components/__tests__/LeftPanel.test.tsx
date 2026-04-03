@@ -28,6 +28,6 @@ describe('LeftPanel', () => {
   it('marks the active section', () => {
     render(<LeftPanel activeSection="work" />)
     const workLink = screen.getByText(/Work/i).closest('a')
-    expect(workLink).toHaveClass('text-ink', 'font-bold')
+    expect(workLink).toHaveClass('text-ink', 'font-black')
   })
 })

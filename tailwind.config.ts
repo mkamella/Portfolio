@@ -17,6 +17,9 @@ const config: Config = {
         accent: '#C0654A',
         'accent-light': '#E8A090',
         white: '#FFFFFF',
+        rust: '#C4704E',
+        sage: '#7A9E7E',
+        charcoal: '#282828',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],

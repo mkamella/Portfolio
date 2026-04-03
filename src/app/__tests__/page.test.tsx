@@ -39,7 +39,7 @@ describe('HomePage', () => {
 
   it('renders the contact section', () => {
     render(<HomePage />)
-    expect(screen.getByText(/let's work/i)).toBeInTheDocument()
+    expect(screen.getByText(/together/i)).toBeInTheDocument()
     const emailLink = screen.getByRole('link', { name: /email/i })
     expect(emailLink.getAttribute('href')).toMatch(/^mailto:/)
   })

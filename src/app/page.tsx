@@ -98,17 +98,17 @@ export default function HomePage() {
           </section>
 
           {/* ABOUT */}
-          <section id="about" className="min-h-screen flex flex-col gap-8 px-11 py-20 bg-cream">
-            <h2 className="font-black text-4xl text-ink uppercase tracking-tighter leading-tight">
+          <section id="about" className="min-h-screen flex flex-col gap-8 px-11 py-20 bg-rust">
+            <h2 className="font-black text-4xl text-white uppercase tracking-tighter leading-tight">
               Designing seamless experiences,<br />one pixel at a time.
             </h2>
-            <div className="h-px bg-subtle" />
+            <div className="h-px bg-white/20" />
 
             <div className="flex gap-10 items-start">
               {/* Image — large, left */}
               <div className="flex flex-col items-center gap-3" style={{ flexBasis: '42%', flexShrink: 0 }}>
                 <motion.div
-                  className="w-full overflow-hidden bg-cream-dark"
+                  className="w-full overflow-hidden bg-rust/60"
                   style={{
                     height: '58vh',
                     borderRadius: BLOB_KEYFRAMES[0],
@@ -122,13 +122,13 @@ export default function HomePage() {
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
-                <p className="text-[9px] text-muted uppercase tracking-widest text-center italic">
+                <p className="text-[9px] text-white/60 uppercase tracking-widest text-center italic">
                   Creating experiences one pixel at a time.
                 </p>
               </div>
 
               {/* Bio — right */}
-              <div className="flex-1 flex flex-col gap-4 text-sm text-muted leading-relaxed pt-2">
+              <div className="flex-1 flex flex-col gap-4 text-sm text-white/80 leading-relaxed pt-2">
                 <p>
                   I&apos;m a UX designer originally from Colorado. My journey started as a computer
                   science major — I loved problem-solving, but my work lacked the visual and
@@ -156,8 +156,8 @@ export default function HomePage() {
           </section>
 
           {/* WORK */}
-          <section id="work" className="min-h-screen px-11 py-20 bg-white">
-            <p className="text-[9px] text-muted uppercase tracking-widest mb-8">
+          <section id="work" className="min-h-screen px-11 py-20 bg-sage">
+            <p className="text-[9px] text-white/60 uppercase tracking-widest mb-8">
               {caseStudies.length} projects
             </p>
             <div className="flex flex-col gap-4">
@@ -168,16 +168,27 @@ export default function HomePage() {
           </section>
 
           {/* CONTACT */}
-          <section id="contact" className="min-h-screen flex flex-col justify-between px-11 py-20 bg-cream">
-            <div className="flex flex-col gap-8">
-              <h2 className="font-black text-5xl text-ink uppercase tracking-tighter leading-tight">
-                Let&apos;s work<br />together.
+          <section id="contact" className="min-h-screen flex flex-col justify-between px-11 py-20 bg-charcoal">
+            <div className="flex flex-col gap-10">
+              <h2 className="font-black text-[80px] text-white uppercase leading-none tracking-[-0.05em]">
+                {["Let's", 'work', 'together.'].map((word, i) => (
+                  <motion.span
+                    key={word}
+                    className="block"
+                    initial={{ y: 80, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: 'spring', damping: 7, stiffness: 70, delay: i * 0.15 }}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
               </h2>
               <div className="flex flex-col gap-4">
                 <a
                   href="mailto:mkdamella@gmail.com"
                   aria-label="Email Mikey"
-                  className="text-base font-medium text-ink border-b-2 border-accent pb-0.5 w-fit hover:text-accent transition-colors"
+                  className="text-base font-medium text-white border-b-2 border-white/40 pb-0.5 w-fit hover:border-accent hover:text-accent transition-colors"
                 >
                   mkdamella@gmail.com
                 </a>
@@ -186,7 +197,7 @@ export default function HomePage() {
                   aria-label="LinkedIn profile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-medium text-muted hover:text-ink transition-colors w-fit"
+                  className="text-base font-medium text-white/50 hover:text-white transition-colors w-fit"
                 >
                   LinkedIn →
                 </a>
@@ -195,7 +206,7 @@ export default function HomePage() {
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center gap-2 text-sm font-bold text-accent uppercase tracking-wider border border-accent px-6 py-3 rounded hover:bg-accent hover:text-white transition-colors w-fit"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider border border-white/30 px-6 py-3 rounded hover:bg-white hover:text-charcoal transition-colors w-fit"
             >
               Download Resume ↓
             </a>
