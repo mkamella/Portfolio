@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import SplitLayout from '@/components/SplitLayout'
 import LeftPanel from '@/components/LeftPanel'
 import StatBlock from '@/components/StatBlock'
-import AnimatedCaseStudyRow from '@/components/AnimatedCaseStudyRow'
+import BentoCard from '@/components/BentoCard'
 import { caseStudies } from '@/data/case-studies'
 import { useActiveSection } from '@/hooks/useActiveSection'
 
@@ -160,10 +160,24 @@ export default function HomePage() {
             <p className="text-[9px] text-white/60 uppercase tracking-widest mb-8">
               {caseStudies.length} projects
             </p>
-            <div className="flex flex-col gap-4">
-              {caseStudies.map((cs, i) => (
-                <AnimatedCaseStudyRow key={cs.slug} caseStudy={cs} index={i} />
-              ))}
+            <div
+              className="grid grid-cols-3 gap-4"
+              style={{ gridTemplateRows: '320px 320px 260px' }}
+            >
+              {/* Project 1 — hero, large */}
+              <div className="col-span-2 row-span-2">
+                <BentoCard caseStudy={caseStudies[0]} index={0} isLarge />
+              </div>
+
+              {/* Projects 2 & 3 — right column */}
+              <BentoCard caseStudy={caseStudies[1]} index={1} />
+              <BentoCard caseStudy={caseStudies[2]} index={2} />
+
+              {/* Projects 4 & 5 — bottom row */}
+              <BentoCard caseStudy={caseStudies[3]} index={3} />
+              <div className="col-span-2">
+                <BentoCard caseStudy={caseStudies[4]} index={4} />
+              </div>
             </div>
           </section>
 

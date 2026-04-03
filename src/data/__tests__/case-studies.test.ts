@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { caseStudies, type CaseStudy } from '../case-studies'
 
 describe('case-studies data', () => {
-  it('exports exactly 6 case studies', () => {
-    expect(caseStudies).toHaveLength(6)
+  it('exports exactly 5 case studies', () => {
+    expect(caseStudies).toHaveLength(5)
   })
 
   it('every case study has required fields', () => {

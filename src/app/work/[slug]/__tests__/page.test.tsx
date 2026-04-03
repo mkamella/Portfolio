@@ -33,7 +33,7 @@ describe('CaseStudyPage', () => {
 
   it('generateStaticParams returns a path for each case study', async () => {
     const params = await generateStaticParams()
-    expect(params).toHaveLength(6)
+    expect(params).toHaveLength(5)
     expect(params[0]).toHaveProperty('slug')
   })
 })
