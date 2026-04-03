@@ -49,12 +49,17 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen flex flex-col px-11 py-12 bg-white">
-            <p className="text-[9px] text-muted uppercase tracking-widest">
-              UX Designer — Portfolio 2025
-            </p>
+          <section id="home" className="h-screen flex flex-col items-center justify-center px-11 py-12 bg-white text-center">
+            <motion.p
+              className="text-base text-muted mb-8"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0, duration: 0.4, ease: 'easeOut' }}
+            >
+              Hi I&apos;m Mikey :)
+            </motion.p>
 
-            <div className="flex-1 flex flex-col justify-center gap-6">
+            <div className="flex flex-col items-center gap-6">
               <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em] overflow-hidden">
                 <motion.span
                   className="block"
@@ -98,7 +103,7 @@ export default function HomePage() {
                   href="#work"
                   className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
                 >
-                  See my work →
+                  See my work ↓
                 </a>
               </motion.div>
             </div>
