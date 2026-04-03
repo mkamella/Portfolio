@@ -7,6 +7,7 @@ import StatBlock from '@/components/StatBlock'
 import BentoCard from '@/components/BentoCard'
 import { caseStudies } from '@/data/case-studies'
 import { useActiveSection } from '@/hooks/useActiveSection'
+import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation'
 
 const SECTIONS = ['home', 'about', 'work', 'contact']
 const TOOLS = ['Figma', 'Miro', 'Axure', 'GitHub', 'Claude']
@@ -182,7 +183,15 @@ export default function HomePage() {
           </section>
 
           {/* CONTACT */}
-          <section id="contact" className="min-h-screen flex flex-col justify-between px-11 py-20 bg-charcoal">
+          <section id="contact" className="min-h-screen">
+          <BackgroundGradientAnimation
+            firstColor="192, 101, 74"
+            secondColor="196, 112, 78"
+            thirdColor="122, 158, 126"
+            fourthColor="232, 160, 144"
+            fifthColor="245, 240, 235"
+            containerClassName="min-h-screen"
+            className="flex flex-col justify-between px-11 py-20 min-h-screen">
             <div className="flex flex-col gap-10">
               <h2 className="font-black text-[80px] text-white uppercase leading-none tracking-[-0.05em]">
                 {["Let's", 'work', 'together.'].map((word, i) => (
@@ -224,6 +233,7 @@ export default function HomePage() {
             >
               Download Resume ↓
             </a>
+          </BackgroundGradientAnimation>
           </section>
         </>
       }

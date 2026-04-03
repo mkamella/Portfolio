@@ -29,6 +29,40 @@ const config: Config = {
         tighter: '-0.03em',
         widest: '0.2em',
       },
+      keyframes: {
+        first: {
+          '0%': { transform: 'rotate(0deg) translate(-5%, -5%)' },
+          '50%': { transform: 'rotate(180deg) translate(-5%, -5%)' },
+          '100%': { transform: 'rotate(360deg) translate(-5%, -5%)' },
+        },
+        second: {
+          '0%': { transform: 'rotate(0deg) translate(-15%, 5%)' },
+          '50%': { transform: 'rotate(-180deg) translate(-15%, 5%)' },
+          '100%': { transform: 'rotate(-360deg) translate(-15%, 5%)' },
+        },
+        third: {
+          '0%': { transform: 'rotate(0deg) translate(5%, -10%)' },
+          '50%': { transform: 'rotate(180deg) translate(5%, -10%)' },
+          '100%': { transform: 'rotate(360deg) translate(5%, -10%)' },
+        },
+        fourth: {
+          '0%': { transform: 'rotate(0deg) translate(-5%, 15%)' },
+          '50%': { transform: 'rotate(-180deg) translate(-5%, 15%)' },
+          '100%': { transform: 'rotate(-360deg) translate(-5%, 15%)' },
+        },
+        fifth: {
+          '0%': { transform: 'rotate(0deg) translate(10%, 5%)' },
+          '50%': { transform: 'rotate(180deg) translate(10%, 5%)' },
+          '100%': { transform: 'rotate(360deg) translate(10%, 5%)' },
+        },
+      },
+      animation: {
+        first: 'first 8s linear infinite',
+        second: 'second 10s linear infinite',
+        third: 'third 12s linear infinite',
+        fourth: 'fourth 9s linear infinite',
+        fifth: 'fifth 11s linear infinite',
+      },
     },
   },
   plugins: [],
