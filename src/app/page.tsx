@@ -185,12 +185,12 @@ export default function HomePage() {
           {/* CONTACT */}
           <section id="contact" className="min-h-screen">
           <BackgroundGradientAnimation
-            firstColor="192, 101, 74"
-            secondColor="196, 112, 78"
-            thirdColor="122, 158, 126"
-            fourthColor="232, 160, 144"
-            fifthColor="245, 240, 235"
-            containerClassName="min-h-screen"
+            firstColor="100, 30, 10"
+            secondColor="120, 40, 15"
+            thirdColor="80, 20, 5"
+            fourthColor="140, 55, 20"
+            fifthColor="90, 25, 8"
+            containerClassName="min-h-screen bg-[#D4693A]"
             className="flex flex-col justify-between px-11 py-20 min-h-screen">
             <div className="flex flex-col gap-10">
               <h2 className="font-black text-[80px] text-white uppercase leading-none tracking-[-0.05em]">

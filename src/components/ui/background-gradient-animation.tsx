@@ -63,7 +63,7 @@ export const BackgroundGradientAnimation = ({
   const blobStyle = (color: string, transformOrigin?: string): React.CSSProperties => ({
     position: 'absolute',
     background: `radial-gradient(circle at center, rgba(${color}, 0.8) 0, rgba(${color}, 0) 50%) no-repeat`,
-    mixBlendMode: 'screen',
+    mixBlendMode: 'multiply',
     width: size,
     height: size,
     top: `calc(50% - ${size} / 2)`,
@@ -74,7 +74,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       ref={containerRef}
-      className={cn('relative overflow-hidden bg-charcoal', containerClassName)}
+      className={cn('relative overflow-hidden', containerClassName)}
       onMouseMove={interactive ? handleMouseMove : undefined}
     >
       {/* Gradient blobs */}
@@ -104,7 +104,7 @@ export const BackgroundGradientAnimation = ({
             style={{
               position: 'absolute',
               background: `radial-gradient(circle at center, rgba(${pointerColor}, 0.6) 0, rgba(${pointerColor}, 0) 50%) no-repeat`,
-              mixBlendMode: 'screen',
+              mixBlendMode: 'multiply',
               width: '100%',
               height: '100%',
               top: '-50%',
