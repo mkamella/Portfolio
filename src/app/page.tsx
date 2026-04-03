@@ -49,106 +49,82 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen w-full flex flex-col items-center justify-center px-11 py-12 bg-white text-center">
-            <motion.p
-              className="font-black text-5xl text-ink mb-6"
-              initial={{ opacity: 0, y: 12 }}
+          <section id="home" className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-11 py-12 bg-white text-center">
+            <motion.h1
+              className="font-black text-[clamp(3.5rem,10vw,7rem)] text-ink leading-none tracking-[-0.04em] mb-6"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0, duration: 0.4, ease: 'easeOut' }}
+              transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
             >
               Hi I&apos;m Mikey :)
+            </motion.h1>
+
+            <motion.p
+              className="flex flex-wrap items-center justify-center gap-x-2 text-xl md:text-2xl font-semibold text-ink/60 mb-8"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
+            >
+              I design
+              <span className="text-accent overflow-hidden inline-flex">
+                <TextRotate
+                  texts={['intuitive', 'thoughtful', 'human']}
+                  rotationInterval={2800}
+                  staggerDuration={0.03}
+                  staggerFrom="first"
+                  transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+                />
+              </span>
+              experiences.
             </motion.p>
 
-            <div className="flex flex-col items-center gap-6">
-              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em]">
-                <motion.span
-                  className="block"
-                  initial={{ y: 80, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.1 }}
-                >
-                  I design
-                </motion.span>
-                <motion.span
-                  className="block text-accent overflow-hidden"
-                  initial={{ y: 80, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.28 }}
-                >
-                  <TextRotate
-                    texts={['intuitive', 'thoughtful', 'human']}
-                    mainClassName="uppercase justify-center"
-                    rotationInterval={2800}
-                    staggerDuration={0.04}
-                    staggerFrom="first"
-                    transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-                  />
-                </motion.span>
-                <motion.span
-                  className="block"
-                  initial={{ y: 80, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.46 }}
-                >
-                  experiences.
-                </motion.span>
-              </h1>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.4, ease: 'easeOut' }}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55, duration: 0.4, ease: 'easeOut' }}
+            >
+              <motion.a
+                href="#work"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
+                whileHover="hover"
               >
-                <motion.a
-                  href="#work"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
-                  whileHover="hover"
+                See my work
+                <motion.span
+                  variants={{ hover: { rotate: 90 } }}
+                  transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+                  className="inline-block"
                 >
-                  See my work
-                  <motion.span
-                    variants={{ hover: { rotate: 90 } }}
-                    transition={{ type: 'spring', damping: 15, stiffness: 300 }}
-                    className="inline-block"
-                  >
-                    →
-                  </motion.span>
-                </motion.a>
-              </motion.div>
-            </div>
+                  →
+                </motion.span>
+              </motion.a>
+            </motion.div>
           </section>
 
           {/* ABOUT */}
-          <section id="about" className="min-h-screen flex flex-col gap-8 px-11 py-20 bg-rust">
-            <h2 className="font-black text-4xl text-white uppercase tracking-tighter leading-tight">
+          <section id="about" className="min-h-screen flex flex-col gap-8 px-6 md:px-11 py-20 bg-rust">
+            <h2 className="font-black text-3xl md:text-4xl text-white uppercase tracking-tighter leading-tight">
               Designing seamless experiences,<br />one pixel at a time.
             </h2>
             <div className="h-px bg-white/20" />
 
-            <div className="flex gap-10 items-start">
-              {/* Image — large, left */}
-              <div className="flex flex-col items-center gap-3" style={{ flexBasis: '42%', flexShrink: 0 }}>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
+              {/* Image */}
+              <div className="flex flex-col items-center gap-3 w-full md:w-auto" style={{ flexBasis: '42%', flexShrink: 0 }}>
                 <motion.div
                   className="w-full overflow-hidden bg-rust/60"
-                  style={{
-                    height: '58vh',
-                    borderRadius: BLOB_KEYFRAMES[0],
-                  }}
+                  style={{ height: '50vw', maxHeight: '58vh', borderRadius: BLOB_KEYFRAMES[0] }}
                   animate={{ borderRadius: BLOB_KEYFRAMES }}
                   transition={{ repeat: Infinity, duration: 11, ease: 'easeInOut' }}
                 >
-                  <img
-                    src="/images/about me picture.jpg"
-                    alt="Mikey Amella"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/images/about me picture.jpg" alt="Mikey Amella" className="w-full h-full object-cover" />
                 </motion.div>
                 <p className="text-[9px] text-white/60 uppercase tracking-widest text-center italic">
                   Creating experiences one pixel at a time.
                 </p>
               </div>
 
-              {/* Bio — right */}
-              <div className="flex-1 flex flex-col gap-4 text-sm text-white/80 leading-relaxed pt-2">
+              {/* Bio */}
+              <div className="flex-1 flex flex-col gap-4 text-sm text-white/80 leading-relaxed">
                 <p>
                   I&apos;m a UX designer originally from Colorado. My journey started as a computer
                   science major — I loved problem-solving, but my work lacked the visual and
@@ -168,7 +144,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <StatBlock value="3+" label="Years Experience" />
               <StatBlock value="10+" label="Projects" />
               <StatBlock value="4" label="Case Studies" />
@@ -176,24 +152,30 @@ export default function HomePage() {
           </section>
 
           {/* WORK */}
-          <section id="work" className="min-h-screen px-11 py-20 bg-sage">
+          <section id="work" className="min-h-screen px-6 md:px-11 py-20 bg-sage">
             <p className="text-[9px] text-white/60 uppercase tracking-widest mb-8">
               {caseStudies.length} projects
             </p>
+
+            {/* Mobile: single column */}
+            <div className="flex flex-col gap-4 md:hidden">
+              {caseStudies.map((cs, i) => (
+                <div key={cs.slug} className="h-64">
+                  <BentoCard caseStudy={cs} index={i} />
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: bento grid */}
             <div
-              className="grid grid-cols-3 gap-4"
+              className="hidden md:grid grid-cols-3 gap-4"
               style={{ gridTemplateRows: '320px 320px 260px' }}
             >
-              {/* Project 1 — hero, large */}
               <div className="col-span-2 row-span-2">
                 <BentoCard caseStudy={caseStudies[0]} index={0} isLarge />
               </div>
-
-              {/* Projects 2 & 3 — right column */}
               <BentoCard caseStudy={caseStudies[1]} index={1} />
               <BentoCard caseStudy={caseStudies[2]} index={2} />
-
-              {/* Projects 4 & 5 — bottom row */}
               <BentoCard caseStudy={caseStudies[3]} index={3} />
               <div className="col-span-2">
                 <BentoCard caseStudy={caseStudies[4]} index={4} />
@@ -210,9 +192,9 @@ export default function HomePage() {
             fourthColor="140, 55, 20"
             fifthColor="90, 25, 8"
             containerClassName="min-h-screen bg-[#D4693A]"
-            className="flex flex-col justify-between px-11 py-20 min-h-screen">
+            className="flex flex-col justify-between px-6 md:px-11 py-20 min-h-screen">
             <div className="flex flex-col gap-10">
-              <h2 className="font-black text-[80px] text-white uppercase leading-none tracking-[-0.05em]">
+              <h2 className="font-black text-[clamp(3rem,8vw,5rem)] text-white uppercase leading-none tracking-[-0.05em]">
                 {["Let's", 'work', 'together.'].map((word, i) => (
                   <motion.span
                     key={word}
