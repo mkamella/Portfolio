@@ -49,9 +49,9 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen flex flex-col items-center justify-center px-11 py-12 bg-white text-center">
+          <section id="home" className="h-screen w-full flex flex-col items-center justify-center px-11 py-12 bg-white text-center">
             <motion.p
-              className="text-base text-muted mb-8"
+              className="font-black text-5xl text-ink mb-6"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0, duration: 0.4, ease: 'easeOut' }}
@@ -60,7 +60,7 @@ export default function HomePage() {
             </motion.p>
 
             <div className="flex flex-col items-center gap-6">
-              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em] overflow-hidden">
+              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em]">
                 <motion.span
                   className="block"
                   initial={{ y: 80, opacity: 0 }}
@@ -70,14 +70,14 @@ export default function HomePage() {
                   I design
                 </motion.span>
                 <motion.span
-                  className="block text-accent"
+                  className="block text-accent overflow-hidden"
                   initial={{ y: 80, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.28 }}
                 >
                   <TextRotate
                     texts={['intuitive', 'thoughtful', 'human']}
-                    mainClassName="uppercase"
+                    mainClassName="uppercase justify-center"
                     rotationInterval={2800}
                     staggerDuration={0.04}
                     staggerFrom="first"
@@ -99,12 +99,20 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.4, ease: 'easeOut' }}
               >
-                <a
+                <motion.a
                   href="#work"
                   className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
+                  whileHover="hover"
                 >
-                  See my work ↓
-                </a>
+                  See my work
+                  <motion.span
+                    variants={{ hover: { rotate: 90 } }}
+                    transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+                    className="inline-block"
+                  >
+                    →
+                  </motion.span>
+                </motion.a>
               </motion.div>
             </div>
           </section>
