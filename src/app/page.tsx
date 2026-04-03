@@ -8,6 +8,7 @@ import BentoCard from '@/components/BentoCard'
 import { caseStudies } from '@/data/case-studies'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation'
+import { TextRotate } from '@/components/ui/text-rotate'
 
 const SECTIONS = ['home', 'about', 'work', 'contact']
 const TOOLS = ['Figma', 'Miro', 'Axure', 'GitHub', 'Claude']
@@ -53,48 +54,53 @@ export default function HomePage() {
               UX Designer — Portfolio 2025
             </p>
 
-            {/* Name + blob image */}
-            <div className="flex-1 flex items-center justify-between gap-6">
-              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em] flex-shrink-0">
-                {['MIKEY', 'AMELLA'].map((word, i) => (
-                  <motion.span
-                    key={word}
-                    className="block"
-                    initial={{ y: 80, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.1 + i * 0.18 }}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
+            <div className="flex-1 flex flex-col justify-center gap-6">
+              <h1 className="font-black text-[80px] text-ink uppercase leading-none tracking-[-0.05em] overflow-hidden">
+                <motion.span
+                  className="block"
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.1 }}
+                >
+                  I design
+                </motion.span>
+                <motion.span
+                  className="block text-accent"
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.28 }}
+                >
+                  <TextRotate
+                    texts={['intuitive', 'thoughtful', 'human']}
+                    mainClassName="uppercase"
+                    rotationInterval={2800}
+                    staggerDuration={0.04}
+                    staggerFrom="first"
+                    transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+                  />
+                </motion.span>
+                <motion.span
+                  className="block"
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ type: 'spring', damping: 7, stiffness: 70, delay: 0.46 }}
+                >
+                  experiences.
+                </motion.span>
               </h1>
 
               <motion.div
-                className="overflow-hidden bg-cream-dark"
-                style={{
-                  width: '48%',
-                  height: '68vh',
-                  borderRadius: BLOB_KEYFRAMES[0],
-                }}
-                animate={{
-                  y: [0, -14, 0],
-                  borderRadius: BLOB_KEYFRAMES,
-                }}
-                transition={{ repeat: Infinity, duration: 9, ease: 'easeInOut' }}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.4, ease: 'easeOut' }}
               >
-                <img
-                  src="/images/Portfolio Header Image.png"
-                  alt="Mikey Amella"
-                  className="w-full h-full object-cover"
-                />
+                <a
+                  href="#work"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
+                >
+                  See my work →
+                </a>
               </motion.div>
-            </div>
-
-            <div className="flex justify-between items-end">
-              <p className="text-sm text-muted leading-relaxed max-w-xs">
-                Crafting human-centered digital experiences that bridge complexity and clarity.
-              </p>
-              <p className="text-[10px] text-muted uppercase tracking-widest">Scroll ↓</p>
             </div>
           </section>
 
