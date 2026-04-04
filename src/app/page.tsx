@@ -197,8 +197,8 @@ export default function HomePage() {
           </section>
 
           {/* WORK */}
-          <section id="work" className="min-h-screen px-6 md:px-11 py-20 bg-[#1A2744]">
-            <h2 className="font-black text-3xl md:text-4xl text-white uppercase tracking-tighter leading-tight mb-8">
+          <section id="work" className="min-h-screen px-6 md:px-11 py-20 bg-cream">
+            <h2 className="font-black text-3xl md:text-4xl text-ink uppercase tracking-tighter leading-tight mb-8">
               My Work
             </h2>
 

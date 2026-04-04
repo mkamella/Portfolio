@@ -11,7 +11,7 @@ export default function SplitLayout({ left, right }: SplitLayoutProps) {
       {/* Desktop left panel */}
       <aside
         data-panel="left"
-        className="hidden md:flex fixed top-0 left-0 h-screen w-60 bg-cream-dark flex-col overflow-y-auto z-10"
+        className="hidden md:flex fixed top-0 left-0 h-screen w-48 bg-cream-dark flex-col overflow-y-auto z-10"
       >
         {left}
       </aside>
@@ -34,7 +34,7 @@ export default function SplitLayout({ left, right }: SplitLayoutProps) {
         </nav>
       </header>
 
-      <main data-panel="right" className="md:ml-60 pt-14 md:pt-0">
+      <main data-panel="right" className="md:ml-48 pt-14 md:pt-0">
         {right}
       </main>
     </>
