@@ -9,6 +9,7 @@ import { caseStudies } from '@/data/case-studies'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation'
 import { TextRotate } from '@/components/ui/text-rotate'
+import Floating, { FloatingElement } from '@/components/ui/parallax-floating'
 
 const SECTIONS = ['home', 'about', 'work', 'contact']
 const TOOLS = ['Figma', 'Miro', 'Axure', 'GitHub', 'Claude']
@@ -49,55 +50,107 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-11 py-12 bg-[#D4693A] text-center">
-            <motion.h1
-              className="font-black text-[clamp(3.5rem,10vw,7rem)] text-white leading-none tracking-[-0.04em] mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
-            >
-              Hi I&apos;m Mikey :)
-            </motion.h1>
+          <section id="home" className="h-screen w-full overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative bg-cream">
 
-            <motion.h2
-              className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-white/90 mb-8"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
-            >
-              I design
-              <span className="text-white overflow-hidden inline-flex underline decoration-white/40 underline-offset-4">
-                <TextRotate
-                  texts={['intuitive', 'thoughtful', 'human']}
-                  rotationInterval={2800}
-                  staggerDuration={0.03}
-                  staggerFrom="first"
-                  transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+            {/* Floating images — desktop only */}
+            <Floating sensitivity={-0.5} className="hidden md:block">
+              <FloatingElement depth={0.5} className="top-[20%] left-[2%]">
+                <motion.img
+                  src="/images/Project 1 Header.png"
+                  alt="Peak Psychological"
+                  className="w-28 h-20 object-cover -rotate-[3deg] shadow-xl rounded-xl hover:scale-105 transition-transform duration-200"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
                 />
-              </span>
-              experiences.
-            </motion.h2>
+              </FloatingElement>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.4, ease: 'easeOut' }}
-            >
-              <motion.a
-                href="#work"
-                className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider border-2 border-white/60 px-6 py-3 rounded hover:bg-white hover:text-[#D4693A] transition-colors"
-                whileHover="hover"
+              <FloatingElement depth={1} className="top-[5%] left-[10%]">
+                <motion.img
+                  src="/images/Project 2 Header.png"
+                  alt="Arrivia"
+                  className="w-52 h-40 object-cover -rotate-6 shadow-xl rounded-xl hover:scale-105 transition-transform duration-200"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
+                />
+              </FloatingElement>
+
+              <FloatingElement depth={3} className="top-[72%] left-[4%]">
+                <motion.img
+                  src="/images/about me picture.jpg"
+                  alt="Mikey"
+                  className="w-52 h-52 object-cover -rotate-[4deg] shadow-xl rounded-xl hover:scale-105 transition-transform duration-200"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}
+                />
+              </FloatingElement>
+
+              <FloatingElement depth={2} className="top-[3%] left-[78%]">
+                <motion.img
+                  src="/images/Project 3 Header.png"
+                  alt="Cobalt"
+                  className="w-56 h-44 object-cover rotate-[6deg] shadow-xl rounded-xl hover:scale-105 transition-transform duration-200"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}
+                />
+              </FloatingElement>
+
+              <FloatingElement depth={1} className="top-[65%] left-[75%]">
+                <motion.img
+                  src="/images/Project 4 Header.png"
+                  alt="Southeast Valley"
+                  className="w-64 h-64 object-cover rotate-[12deg] shadow-xl rounded-xl hover:scale-105 transition-transform duration-200"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3 }}
+                />
+              </FloatingElement>
+            </Floating>
+
+            {/* Center text */}
+            <div className="relative z-10 flex flex-col items-center text-center px-6">
+              <motion.h1
+                className="font-black text-[clamp(3.5rem,10vw,7rem)] text-ink leading-none tracking-[-0.04em] mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
               >
-                See my work
-                <motion.span
-                  variants={{ hover: { rotate: 90 } }}
-                  transition={{ type: 'spring', damping: 15, stiffness: 300 }}
-                  className="inline-block"
+                Hi I&apos;m Mikey :)
+              </motion.h1>
+
+              <motion.h2
+                className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-ink/70 mb-8"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
+              >
+                I design
+                <span className="text-accent overflow-hidden inline-flex">
+                  <TextRotate
+                    texts={['intuitive', 'thoughtful', 'human']}
+                    rotationInterval={2800}
+                    staggerDuration={0.03}
+                    staggerFrom="first"
+                    transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+                  />
+                </span>
+                experiences.
+              </motion.h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55, duration: 0.4, ease: 'easeOut' }}
+              >
+                <motion.a
+                  href="#work"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
+                  whileHover="hover"
                 >
-                  →
-                </motion.span>
-              </motion.a>
-            </motion.div>
+                  See my work
+                  <motion.span
+                    variants={{ hover: { rotate: 90 } }}
+                    transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+                    className="inline-block"
+                  >
+                    →
+                  </motion.span>
+                </motion.a>
+              </motion.div>
+            </div>
           </section>
 
           {/* ABOUT */}
