@@ -27,26 +27,7 @@ export default function HomePage() {
 
   return (
     <SplitLayout
-      left={
-        <LeftPanel
-          activeSection={activeSection}
-          footer={
-            <div>
-              <p className="text-[8px] text-muted uppercase tracking-widest mb-2">Tools</p>
-              <div className="flex flex-wrap gap-1">
-                {TOOLS.map((tool) => (
-                  <span
-                    key={tool}
-                    className="text-[8px] uppercase tracking-wider text-muted border border-subtle bg-white rounded px-2 py-1"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-          }
-        />
-      }
+      left={<LeftPanel activeSection={activeSection} />}
       right={
         <>
           {/* HOME */}
@@ -156,44 +137,55 @@ export default function HomePage() {
           {/* ABOUT */}
           <section id="about" className="min-h-screen flex flex-col gap-8 px-6 md:px-11 py-20 bg-rust">
             <h2 className="font-black text-3xl md:text-4xl text-white uppercase tracking-tighter leading-tight">
-              Designing seamless experiences,<br />one pixel at a time.
+              Get to Know Me!
             </h2>
             <div className="h-px bg-white/20" />
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
               {/* Image */}
-              <div className="flex flex-col items-center gap-3 w-full md:w-auto" style={{ flexBasis: '42%', flexShrink: 0 }}>
+              <div className="flex flex-col items-center gap-3 w-full md:w-auto" style={{ flexBasis: '38%', flexShrink: 0 }}>
                 <motion.div
                   className="w-full overflow-hidden bg-rust/60"
-                  style={{ height: '50vw', maxHeight: '58vh', borderRadius: BLOB_KEYFRAMES[0] }}
+                  style={{ height: '50vw', maxHeight: '56vh', borderRadius: BLOB_KEYFRAMES[0] }}
                   animate={{ borderRadius: BLOB_KEYFRAMES }}
                   transition={{ repeat: Infinity, duration: 11, ease: 'easeInOut' }}
                 >
-                  <img src="/images/about me picture.jpg" alt="Mikey Amella" className="w-full h-full object-cover" />
+                  <img src="/images/Portfolio Header Image.png" alt="Mikey Amella" className="w-full h-full object-cover" />
                 </motion.div>
                 <p className="text-[9px] text-white/60 uppercase tracking-widest text-center italic">
-                  Creating experiences one pixel at a time.
+                  Designing seamless experiences, one outfit (and pixel) at a time.
                 </p>
               </div>
 
               {/* Bio */}
               <div className="flex-1 flex flex-col gap-4 text-sm text-white/80 leading-relaxed">
                 <p>
-                  I&apos;m a UX designer originally from Colorado. My journey started as a computer
-                  science major — I loved problem-solving, but my work lacked the visual and
-                  experiential impact I was searching for. That realization led me to switch schools
-                  and majors, where I discovered my passion for UX and product design.
+                  I&apos;m a UX designer originally from Colorado. My journey into design started as a computer science major, driven by my love for creativity and problem-solving. However, after completing numerous coding assignments, I realized my work lacked the visual and experiential impact I was searching for. That realization led me to switch schools and majors, where I discovered my passion for UX and product design.
                 </p>
                 <p>
-                  I graduated summa cum laude from Arizona State University, earning the Outstanding
-                  UX Award and Super Star Award for my contributions to the field. Since then I&apos;ve
-                  led redesigns for Fortune 500 travel platforms, healthcare clinics, and non-profits —
-                  always focused on turning complexity into clarity.
+                  I graduated summa cum laude from Arizona State University, where I refined my design skills and was honored with the Outstanding UX Award and Super Star Award for my contributions to the major and field. These experiences solidified my commitment to creating meaningful, user-centered design solutions.
                 </p>
                 <p>
-                  When I&apos;m not designing, you can find me thrifting, hiking, or exploring new
-                  places — I&apos;m always looking for inspiration in the world around me.
+                  While at ASU, I served as a UX Designer and Project Manager for Arizona State University&apos;s Creative Agency, where I led student teams on impactful design projects for the Arizona community. I also gained professional experience as a Product Designer at Arrivia in Scottsdale, collaborating with designers and researchers to execute platform redesigns for Fortune 500 companies.
                 </p>
+                <p>
+                  My perspective on UX has evolved from creating fun, engaging experiences to designing immersive and unforgettable ones that resonate with users.
+                </p>
+                <p>
+                  When I&apos;m not designing, you can find me thrifting, hiking, or exploring new places—I&apos;m always looking for inspiration in the world around me!
+                </p>
+              </div>
+            </div>
+
+            {/* Core Values */}
+            <div>
+              <h3 className="font-black text-sm text-white uppercase tracking-widest mb-4">My Core Values</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Be Humorous', 'Stay Curious', 'Be Empathetic', 'Stay Inclusive', 'Be Adaptable', 'Remain Resilient'].map((value) => (
+                  <span key={value} className="text-xs font-semibold text-white border border-white/40 rounded-full px-4 py-1.5">
+                    {value}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -205,10 +197,10 @@ export default function HomePage() {
           </section>
 
           {/* WORK */}
-          <section id="work" className="min-h-screen px-6 md:px-11 py-20 bg-sage">
-            <p className="text-[9px] text-white/60 uppercase tracking-widest mb-8">
-              {caseStudies.length} projects
-            </p>
+          <section id="work" className="min-h-screen px-6 md:px-11 py-20 bg-charcoal">
+            <h2 className="font-black text-3xl md:text-4xl text-white uppercase tracking-tighter leading-tight mb-8">
+              My Work
+            </h2>
 
             {/* Mobile: single column */}
             <div className="flex flex-col gap-4 md:hidden">

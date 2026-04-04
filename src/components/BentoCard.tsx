@@ -33,22 +33,22 @@ export default function BentoCard({ caseStudy, index, isLarge = false }: BentoCa
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/60" />
+        {/* Gradient overlay — stronger at bottom for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
 
         {/* Content pinned to bottom */}
         <div className="relative mt-auto p-6">
-          <p className="text-[9px] text-white/50 uppercase tracking-widest mb-1.5">
+          <p className="text-xs text-white/70 font-medium mb-2">
             {num} · {tags} · {caseStudy.year}
           </p>
           <h2
-            className={`font-black text-white uppercase tracking-tight leading-tight transition-colors group-hover:text-accent-light ${
+            className={`font-black text-white uppercase tracking-tight leading-tight transition-colors group-hover:text-white ${
               isLarge ? 'text-2xl' : 'text-base'
             }`}
           >
             {caseStudy.title.toUpperCase()}
           </h2>
-          <span className="inline-block mt-2 text-white/30 group-hover:text-accent group-hover:translate-x-1 transition-all duration-200">
+          <span className="inline-block mt-2 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-200">
             →
           </span>
         </div>
