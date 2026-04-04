@@ -49,65 +49,55 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen w-full">
-            <BackgroundGradientAnimation
-              firstColor="192, 101, 74"
-              secondColor="196, 112, 78"
-              thirdColor="122, 158, 126"
-              fourthColor="232, 160, 144"
-              fifthColor="245, 240, 235"
-              containerClassName="h-full bg-[#D4693A]"
-              className="h-full flex flex-col items-center justify-center px-6 md:px-11 py-12 text-center"
+          <section id="home" className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-11 py-12 bg-[#D4693A] text-center">
+            <motion.h1
+              className="font-black text-[clamp(3.5rem,10vw,7rem)] text-white leading-none tracking-[-0.04em] mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
             >
-              <motion.h1
-                className="font-black text-[clamp(3.5rem,10vw,7rem)] text-white leading-none tracking-[-0.04em] mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
-              >
-                Hi I&apos;m Mikey :)
-              </motion.h1>
+              Hi I&apos;m Mikey :)
+            </motion.h1>
 
-              <motion.h2
-                className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-white/90 mb-8"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
-              >
-                I design
-                <span className="text-white overflow-hidden inline-flex underline decoration-white/40 underline-offset-4">
-                  <TextRotate
-                    texts={['intuitive', 'thoughtful', 'human']}
-                    rotationInterval={2800}
-                    staggerDuration={0.03}
-                    staggerFrom="first"
-                    transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-                  />
-                </span>
-                experiences.
-              </motion.h2>
+            <motion.h2
+              className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-white/90 mb-8"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
+            >
+              I design
+              <span className="text-white overflow-hidden inline-flex underline decoration-white/40 underline-offset-4">
+                <TextRotate
+                  texts={['intuitive', 'thoughtful', 'human']}
+                  rotationInterval={2800}
+                  staggerDuration={0.03}
+                  staggerFrom="first"
+                  transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+                />
+              </span>
+              experiences.
+            </motion.h2>
 
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55, duration: 0.4, ease: 'easeOut' }}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55, duration: 0.4, ease: 'easeOut' }}
+            >
+              <motion.a
+                href="#work"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider border-2 border-white/60 px-6 py-3 rounded hover:bg-white hover:text-[#D4693A] transition-colors"
+                whileHover="hover"
               >
-                <motion.a
-                  href="#work"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider border-2 border-white/60 px-6 py-3 rounded hover:bg-white hover:text-[#D4693A] transition-colors"
-                  whileHover="hover"
+                See my work
+                <motion.span
+                  variants={{ hover: { rotate: 90 } }}
+                  transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+                  className="inline-block"
                 >
-                  See my work
-                  <motion.span
-                    variants={{ hover: { rotate: 90 } }}
-                    transition={{ type: 'spring', damping: 15, stiffness: 300 }}
-                    className="inline-block"
-                  >
-                    →
-                  </motion.span>
-                </motion.a>
-              </motion.div>
-            </BackgroundGradientAnimation>
+                  →
+                </motion.span>
+              </motion.a>
+            </motion.div>
           </section>
 
           {/* ABOUT */}
