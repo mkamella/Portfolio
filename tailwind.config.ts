@@ -17,7 +17,7 @@ const config: Config = {
         accent: '#C0654A',
         'accent-light': '#E8A090',
         white: '#FFFFFF',
-        rust: '#FE914E',
+        rust: '#C4704E',
         sage: '#7A9E7E',
         charcoal: '#282828',
         'hero-blue': '#2852AD',
