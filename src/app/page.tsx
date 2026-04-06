@@ -84,7 +84,7 @@ export default function HomePage() {
             {/* Center text */}
             <div className="relative z-10 flex flex-col items-center text-center px-6">
               <motion.h1
-                className="font-black text-[clamp(3.5rem,10vw,7rem)] text-hero-yellow leading-none tracking-[-0.04em] mb-12"
+                className="font-handwritten text-[clamp(4rem,12vw,9rem)] text-hero-yellow leading-none tracking-normal mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}

@@ -25,6 +25,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
+        handwritten: ['var(--font-caveat)', 'cursive'],
       },
       letterSpacing: {
         tightest: '-0.05em',
