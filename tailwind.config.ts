@@ -20,8 +20,8 @@ const config: Config = {
         rust: '#C4704E',
         sage: '#7A9E7E',
         charcoal: '#282828',
-        'hero-blue': '#4E8098',
-        'hero-yellow': '#CFDE3B',
+        'hero-blue': '#2852AD',
+        'hero-yellow': '#F6CF4A',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
