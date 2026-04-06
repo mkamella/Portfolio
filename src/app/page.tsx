@@ -31,7 +31,7 @@ export default function HomePage() {
       right={
         <>
           {/* HOME */}
-          <section id="home" className="h-screen w-full overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative bg-cream">
+          <section id="home" className="h-screen w-full overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative bg-hero-blue">
 
             {/* Floating images — desktop only */}
             <Floating sensitivity={-0.5} className="hidden md:block">
@@ -84,7 +84,7 @@ export default function HomePage() {
             {/* Center text */}
             <div className="relative z-10 flex flex-col items-center text-center px-6">
               <motion.h1
-                className="font-black text-[clamp(3.5rem,10vw,7rem)] text-ink leading-none tracking-[-0.04em] mb-12"
+                className="font-black text-[clamp(3.5rem,10vw,7rem)] text-hero-yellow leading-none tracking-[-0.04em] mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: 'spring', damping: 10, stiffness: 80, delay: 0.05 }}
@@ -93,13 +93,13 @@ export default function HomePage() {
               </motion.h1>
 
               <motion.h2
-                className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-ink/70 mb-8"
+                className="flex flex-wrap items-center justify-center gap-x-3 text-2xl md:text-4xl font-bold text-white mb-8"
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
               >
                 I design
-                <span className="text-accent overflow-hidden inline-flex">
+                <span className="text-hero-yellow overflow-hidden inline-flex">
                   <TextRotate
                     texts={['intuitive', 'thoughtful', 'human']}
                     rotationInterval={2800}
