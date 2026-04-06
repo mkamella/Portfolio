@@ -118,7 +118,7 @@ export default function HomePage() {
               >
                 <motion.a
                   href="#work"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider bg-ink px-6 py-3 rounded hover:bg-accent transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-hero-blue uppercase tracking-wider bg-hero-yellow px-6 py-3 rounded hover:bg-white transition-colors"
                   whileHover="hover"
                 >
                   See my work
