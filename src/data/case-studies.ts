@@ -13,6 +13,7 @@ export interface CaseStudy {
   team: string
   thumbnail: string
   heroImage: string
+  contentImages?: string[]
   overview: {
     headline: string
     body: string
@@ -185,7 +186,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'project-five',
-    title: 'Case Study Coming Soon',
+    title: 'UCDA Conference Branding',
     tags: ['UX Design'],
     year: 2023,
     role: 'UX Designer',
@@ -193,6 +194,17 @@ export const caseStudies: CaseStudy[] = [
     team: 'TBD',
     thumbnail: '/images/Project 5 Header.png',
     heroImage: '/images/Project 5 Header.png',
+    contentImages: [
+      '/images/Immerse 1.png',
+      '/images/Immerse 2.png',
+      '/images/Immerse 3.png',
+      '/images/Immerse 4.png',
+      '/images/Immerse 5.png',
+      '/images/Immerse 6.png',
+      '/images/Immerse 7.png',
+      '/images/Immerse 8.png',
+      '/images/Immerse 9.png',
+    ],
     overview: {
       headline: 'More work coming soon.',
       body: 'This case study is in progress.',
