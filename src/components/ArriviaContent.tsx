@@ -26,7 +26,7 @@ function ScrollToTop() {
 
 const ORIGINAL_SLIDES = [
   { src: '/images/Arrivia/Original 1.png', label: 'Original Website' },
-  { src: '/images/Arrivia/original 2.png', label: 'Original Website — Page 2' },
+  { src: '/images/Arrivia/original 2.png', label: 'Original Website, Page 2' },
 ]
 
 function OriginalWebsiteCarousel() {
@@ -133,12 +133,12 @@ export default function ArriviaContent() {
       {/* ── HERO ── */}
       <section className="px-11 py-16 border-b border-subtle flex flex-col md:flex-row items-center gap-12" style={{ background: ACCENT }}>
         <div className="flex-1 min-w-0">
-<p className="text-[10px] uppercase tracking-widest mb-4 font-semibold text-white/60">Case Study — Travel & Loyalty</p>
+<p className="text-[10px] uppercase tracking-widest mb-4 font-semibold text-white/60">Case Study: Travel & Loyalty</p>
           <h1 className="font-black text-[clamp(2rem,5vw,3.5rem)] leading-tight text-white mb-5">
             Reimagining a Member Booking Experience
           </h1>
           <p className="text-sm text-white/70 leading-relaxed mb-8">
-            The UX Design team and I worked with Arrivia&apos;s Fortune 500 partner to reimagine their travel website for members. The existing platform lacked the UX fundamentals needed to engage users and inspire bookings — it felt outdated, overwhelming, and failed to help members understand or use their benefits. Our redesign was backed by two full rounds of user research and produced a modern, member-first experience across hotel, air, resort, and cruise booking.
+            The UX Design team and I worked with Arrivia&apos;s Fortune 500 partner to reimagine their travel website for members. The existing platform was outdated and overwhelming, and it failed to help members understand or use their benefits. Our redesign was built on two rounds of user research and produced a modern, member-first experience across hotel, air, resort, and cruise booking.
           </p>
           <a
             href="#ongoing-ui"
@@ -159,14 +159,14 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold text-[#E05C5C] mb-2">Problem</p>
           <h2 className="font-black text-xl mb-4">What wasn&apos;t working</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The partner&apos;s travel website lacked the necessary UX elements that would normally engage users and make them want to book travel. The website felt and looked outdated, which drove users away. Members also struggled to understand their membership benefits and how to apply savings credits to bookings — a core value proposition that was nearly invisible in the original design.
+            The partner&apos;s travel website was outdated and lacked the basic UX foundations needed to engage users. Members had a hard time understanding their benefits and figuring out how to apply savings credits to bookings. That was the whole point of the membership, and the original design made it nearly invisible.
           </p>
         </div>
         <div className="bg-white rounded-xl p-7 border-t-4" style={{ borderColor: ACCENT }}>
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Solution</p>
           <h2 className="font-black text-xl mb-4">How we fixed it</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            My team and I took a simple, modern approach to the redesign — the original site was too overwhelming and failed to build trust. I focused on the travel deal cards and the welcome experience, exploring ways to surface member value immediately. We designed a member onboarding experience, a clearer currency bar that updated in real time, and an information library to help members understand their benefits.
+            My team and I stripped things back and started fresh. The original site was overwhelming and failed to build trust, so we focused on clarity. I worked on the deal cards and the welcome experience to surface member value right away. We built a member onboarding flow, redesigned the currency bar to update in real time, and created a benefits library so members could actually understand what they had.
           </p>
         </div>
       </section>
@@ -187,22 +187,24 @@ export default function ArriviaContent() {
       </section>
 
       {/* ── DESIGN PROCESS ── */}
-      <section className="px-11 py-12 bg-white border-b border-subtle overflow-x-auto">
-        <p className="text-[9px] uppercase tracking-widest font-semibold mb-8" style={{ color: ACCENT }}>Design Process</p>
-        <div className="flex items-start min-w-max">
-          {PROCESS_STEPS.map((label, i) => (
-            <div key={i} className="flex items-center">
-              <div className="flex flex-col items-center gap-3 w-36">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-black text-lg shadow-md" style={{ background: ACCENT }}>
-                  {i + 1}
+      <section className="px-11 py-12 bg-white border-b border-subtle">
+        <p className="text-[9px] uppercase tracking-widest font-semibold mb-8 text-center" style={{ color: ACCENT }}>Design Process</p>
+        <div className="overflow-x-auto">
+          <div className="flex items-start w-fit mx-auto">
+            {PROCESS_STEPS.map((label, i) => (
+              <div key={i} className="flex items-center">
+                <div className="flex flex-col items-center gap-3 w-36">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-black text-lg shadow-md" style={{ background: ACCENT }}>
+                    {i + 1}
+                  </div>
+                  <p className="text-[10px] text-center text-muted leading-snug px-1">{label}</p>
                 </div>
-                <p className="text-[10px] text-center text-muted leading-snug px-1">{label}</p>
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div className="h-px w-10 flex-shrink-0 mb-8" style={{ background: ACCENT, opacity: 0.3 }} />
+                )}
               </div>
-              {i < PROCESS_STEPS.length - 1 && (
-                <div className="h-px w-10 flex-shrink-0 mb-8" style={{ background: ACCENT, opacity: 0.3 }} />
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -211,10 +213,10 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Discovery</p>
         <h2 className="font-black text-2xl mb-6">Understanding the Existing Platform</h2>
         <NumberedCards items={[
-          'Conducted a full audit of the existing member booking platform to identify usability failures and missed value propositions.',
-          'Interviewed stakeholders to understand business goals, member segments, and known pain points with the current site.',
-          'Mapped the member journey from login to booking completion, identifying where users dropped off or expressed confusion.',
-          'Benchmarked competitor travel platforms to identify patterns in deal presentation, onboarding, and benefit communication.',
+          'Audited the existing booking platform to identify usability failures and missed value propositions.',
+          'Talked to stakeholders to understand business goals, member segments, and known pain points.',
+          'Mapped the member journey from login to booking completion, finding where users dropped off or got confused.',
+          'Reviewed competitor travel platforms to understand what was working in deal presentation, onboarding, and benefit communication.',
         ]} />
       </section>
 
@@ -224,7 +226,7 @@ export default function ArriviaContent() {
         <h2 className="font-black text-2xl mb-6">Original Website</h2>
         <OriginalWebsiteCarousel />
         <p className="text-[9px] text-muted uppercase tracking-widest text-center mt-4 italic">
-          The existing platform — outdated, visually overwhelming, and hard to navigate
+          The original platform: outdated, visually overwhelming, and hard to navigate
         </p>
       </section>
 
@@ -233,10 +235,10 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Research</p>
         <h2 className="font-black text-2xl mb-5">Initial Usability Study</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-6">
-          Before redesigning, we ran an initial usability study on the previous team&apos;s designs with 15 participants to understand exactly where the experience was breaking down. The findings were clear and directional.
+          Before redesigning, we ran a usability study on the previous team&apos;s designs with 15 participants to understand where the experience was breaking down.
         </p>
         <NumberedCards items={[
-          '7 of 15 users could not complete tasks involving member savings credits — the currency bar was a consistent pain point.',
+          '7 of 15 users could not complete tasks involving member savings credits. The currency bar was a consistent pain point.',
           'The currency bar did not update after bookings and failed to explain different currency types.',
           'Deal cards were frequently missed or ignored when placed below the fold.',
           'Users expressed low confidence when navigating between booking categories (hotel, air, cruise).',
@@ -276,7 +278,7 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Design</p>
           <h2 className="font-black text-2xl mb-4">Wireframes</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            Low fidelity wireframes helped lock in structure and information hierarchy before any visual design decisions were made. I focused on surfacing member value — deal cards, currency balance, and booking CTAs — above the fold, and restructured the navigation to reduce the number of steps between login and booking.
+            Low fidelity wireframes helped lock in structure before any visual decisions were made. I focused on surfacing member value above the fold (deal cards, currency balance, booking CTAs) and restructured navigation to cut down the steps between login and booking.
           </p>
         </div>
         <div className="w-full md:w-2/5 flex-shrink-0">
@@ -290,7 +292,7 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Design</p>
           <h2 className="font-black text-2xl mb-4">Mid Fidelity Designs</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            Mid fidelity designs brought structure to life with real content, spacing, and component relationships. These were used in our first round of stakeholder reviews and informed how we approached the transition to high fidelity — prioritizing the booking flow and member dashboard before tackling secondary pages.
+            Mid fidelity designs brought structure to life with real content, spacing, and component relationships. These drove our first round of stakeholder reviews and helped us figure out where to focus in high fidelity: the booking flow and member dashboard came first.
           </p>
         </div>
         <div className="w-full md:w-1/2 flex-shrink-0">
@@ -310,7 +312,7 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Final UI</p>
           <h2 className="font-black text-2xl mb-4">Shop Travel Landing Page</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The redesigned landing page surfaced deal cards prominently above the fold, with a persistent currency bar showing real-time balance updates. I restructured the page hierarchy so members could immediately understand what they could book and how their credits applied — reducing the friction that caused drop-off in the original design.
+            The redesigned landing page surfaced deal cards prominently above the fold, with a currency bar that updated in real time. I restructured the page hierarchy so members could quickly understand what they could book and how their credits applied, which cut down the friction that caused drop-off in the original.
           </p>
         </div>
         <div className="w-full md:w-1/2 flex-shrink-0">
@@ -324,7 +326,7 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Final UI</p>
           <h2 className="font-black text-2xl mb-4">My Benefits Page</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The benefits page gave members a dedicated space to understand what they had access to, how their credits worked, and how to use them. This directly addressed the biggest usability failure in the original product — members simply did not understand their membership value, and as a result, rarely used it.
+            The benefits page gave members a clear place to understand what they had access to, how their credits worked, and how to use them. In the original product, members rarely understood their membership value. This page fixed that.
           </p>
         </div>
         <div className="w-full md:w-2/5 flex-shrink-0">
@@ -337,9 +339,9 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Final UI</p>
         <h2 className="font-black text-2xl mb-4">The Onboarding Experience</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-8">
-          We designed a member onboarding experience to introduce new and returning users to the platform — explaining the types of credits available, how savings apply to bookings, and what to do first. The onboarding flow was well received: 5 of 9 external users engaged with it and left positive feedback in round two of testing.
+          We built a member onboarding experience to introduce users to the platform, covering the types of credits available, how savings apply to bookings, and where to start. The flow landed well in testing: 5 of 9 external users engaged with it and left positive feedback.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           <PhoneFrame src="/images/Arrivia/board 1.png" alt="Onboarding screen 1" />
           <PhoneFrame src="/images/Arrivia/board 2.png" alt="Onboarding screen 2" />
           <PhoneFrame src="/images/Arrivia/board 3.png" alt="Onboarding screen 3" />
@@ -352,10 +354,10 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Research</p>
         <h2 className="font-black text-2xl mb-5">Usability Testing</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-6">
-          After our first round of redesign, we conducted usability testing with 9 internal travel agents over two weeks. This round validated our structural changes and surfaced interaction-level refinements before we moved to external testing.
+          After our first redesign round, we tested with 9 internal travel agents over two weeks. This validated our structural changes and surfaced smaller interaction issues before we moved to external users.
         </p>
         <NumberedCards items={[
-          'The updated currency bar was understood immediately by 8 of 9 participants — a significant improvement over baseline.',
+          'The updated currency bar was understood immediately by 8 of 9 participants, a significant improvement over baseline.',
           'Deal cards placed above the fold saw strong engagement; participants noticed and interacted with them unprompted.',
           'Navigation between booking categories (hotel, air, cruise) was rated as clear and intuitive by all participants.',
           'Minor issues with the onboarding skip flow were flagged and addressed before external testing.',
@@ -365,12 +367,12 @@ export default function ArriviaContent() {
       {/* ── USABILITY TESTING SECOND ROUND ── */}
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Research</p>
-        <h2 className="font-black text-2xl mb-5">Usability Testing — Second Round</h2>
+        <h2 className="font-black text-2xl mb-5">Usability Testing: Second Round</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-6">
-          The second round brought in 9 external users over 3 weeks. This gave us unfiltered feedback from real members and produced our final SUS score improvement.
+          The second round brought in 9 external users over 3 weeks, giving us real-world feedback from actual members.
         </p>
         <NumberedCards items={[
-          'SUS score rose from 62 (original site) to 80 (round 1) to 83 (round 2) — approaching the 85.5 benchmark for excellence.',
+          'SUS score rose from 62 (original site) to 80 (round 1) to 83 (round 2), approaching the 85.5 benchmark for excellence.',
           '5 of 9 external users engaged with the onboarding experience and provided unprompted positive feedback.',
           'The "My Benefits" page was cited as a valuable addition by 7 of 9 participants who said they had never understood their credits before.',
           'Overall task completion rate reached 70%, up significantly from the baseline.',
@@ -382,9 +384,9 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-6" style={{ color: ACCENT }}>Priorities</p>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { label: 'Priority 1', text: 'Surface member value immediately on login — credits, deals, and savings should be visible before any other action.' },
-            { label: 'Priority 2', text: 'Fix the currency bar so it updates in real time and clearly explains each credit type and how it applies to bookings.' },
-            { label: 'Priority 3', text: 'Move deal cards above the fold — every other design decision was evaluated against whether it supported these three priorities.' },
+            { label: 'Priority 1', text: 'Surface member value immediately on login. Credits, deals, and savings should be visible before anything else.' },
+            { label: 'Priority 2', text: 'Fix the currency bar: update it in real time and clearly explain each credit type and how it applies to bookings.' },
+            { label: 'Priority 3', text: 'Move deal cards above the fold. Every other design decision was measured against whether it served these priorities.' },
           ].map(({ label, text }, i) => (
             <div key={label} className="bg-white rounded-xl p-6 shadow-sm border border-subtle flex flex-col gap-3">
               <div className="w-8 h-8 rounded-full text-white text-sm font-black flex items-center justify-center" style={{ background: ACCENT }}>
@@ -403,7 +405,7 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Final UI</p>
           <h2 className="font-black text-2xl mb-4">UI Design (Ongoing Designs)</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            As the platform continued to evolve, I contributed ongoing UI designs across additional booking flows and account management screens. The design template was later adopted for other Arrivia client accounts, and I created a design toolkit that enabled the account management team to present the system to new clients independently — extending the reach of our work beyond the original engagement.
+            As the platform evolved, I contributed UI designs across additional booking flows and account management screens. The template was later picked up for other Arrivia client accounts, and I built a design toolkit that let the account management team present the system to new clients on their own.
           </p>
         </div>
         <div className="w-full md:w-2/5 flex-shrink-0">
@@ -417,9 +419,9 @@ export default function ArriviaContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-5" style={{ color: ACCENT }}>Learnings</p>
           <div className="flex flex-col gap-3">
             {[
-              'Working on a Fortune 500 platform reinforced how high the stakes are when value propositions are unclear — if users can\'t understand what they have, they disengage regardless of visual polish.',
-              'Research-backed iteration was essential: every structural decision was validated before investing in high fidelity, which saved significant rework time.',
-              'A well-designed onboarding experience doesn\'t just orient users — it sets their expectations and builds confidence for everything that follows.',
+              'Working on a Fortune 500 platform reinforced how much unclear value propositions cost. If users can\'t understand what they have, they disengage regardless of visual polish.',
+              'Research-backed iteration saved real time. Validating structural decisions before high fidelity meant we didn\'t have to rebuild work.',
+              'A solid onboarding experience doesn\'t just orient users. It sets their expectations and builds the confidence they need for everything that follows.',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 bg-white rounded-lg px-5 py-4 shadow-sm border border-subtle">
                 <span className="text-sm font-black shrink-0 mt-0.5" style={{ color: ACCENT }}>0{i + 1}</span>
@@ -451,9 +453,9 @@ export default function ArriviaContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Results</p>
         <h2 className="font-black text-2xl mb-5">Business Impact</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-12">
-          The redesigned platform significantly improved member engagement and comprehension. The System Usability Scale score rose from 62 on the original site to 83 after two rounds of iteration — approaching the 85.5 benchmark for excellence. The design template was adopted for other Arrivia client accounts, and I created a design toolkit that enabled the account management team to present the system to new clients independently.
+          The redesigned platform improved both member engagement and comprehension. SUS scores rose from 62 on the original site to 83 after two rounds of work, approaching the 85.5 benchmark for excellence. The design template was adopted across other Arrivia client accounts, and I built a toolkit that let the account management team present the system to new clients on their own.
         </p>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { value: '62 → 83', bold: 'SUS Score improvement', rest: 'approaching excellence benchmark' },
             { value: '70%', bold: 'task completion rate', rest: 'up significantly from baseline' },

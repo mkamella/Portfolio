@@ -6,8 +6,8 @@ import { caseStudies } from '@/data/case-studies'
 const ACCENT = '#4A90B8'
 
 const DESKTOP_SLIDES = [
-  { src: '/images/Peak/desktop ui 1.png', label: 'Desktop UI — Homepage' },
-  { src: '/images/Peak/desktop ui 2.png', label: 'Desktop UI — Marketing Page' },
+  { src: '/images/Peak/desktop ui 1.png', label: 'Desktop UI: Homepage' },
+  { src: '/images/Peak/desktop ui 2.png', label: 'Desktop UI: Marketing Page' },
 ]
 
 function IMacCarousel() {
@@ -125,12 +125,12 @@ export default function PeakPsychologicalContent() {
       {/* ── HERO ── */}
       <section className="px-11 py-16 border-b border-subtle flex flex-col md:flex-row items-center gap-12" style={{ background: '#EEF5FB' }}>
         <div className="flex-1 min-w-0">
-<p className="text-[10px] uppercase tracking-widest mb-4 font-semibold" style={{ color: ACCENT }}>Case Study — Healthcare</p>
+<p className="text-[10px] uppercase tracking-widest mb-4 font-semibold" style={{ color: ACCENT }}>Case Study: Healthcare</p>
           <h1 className="font-black text-[clamp(2rem,5vw,3.5rem)] leading-tight mb-5">
             Designing the First Step Toward Therapy
           </h1>
           <p className="text-sm text-ink/70 leading-relaxed mb-8">
-            Redesigned the homepage to help prospective clients find the right care faster and contact the clinic with confidence. Delivered developer ready designs that improved clarity, credibility, and new client inquiries.
+            Redesigned the Peak Psychological homepage to help prospective clients find the right care and reach out with confidence. Delivered clean handoff designs that improved clarity, credibility, and new client inquiries.
           </p>
           <a
             href="#desktop-ui"
@@ -150,7 +150,7 @@ export default function PeakPsychologicalContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Overview</p>
         <h2 className="font-black text-2xl mb-5">About the Project</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          Peak Psychological Service needed a homepage and a marketing Landing Page that matched the quality of care they provide, but the existing page made it hard for visitors to understand services, trust the clinic, and take the next step. I led the homepage redesign as the UX Designer, owning the process from early exploration through final UI and handoff. I focused on turning anxious, information seeking visitors into confident prospective clients by clarifying offerings, strengthening trust cues, and making contact options easier to find. Alongside the visual redesign, I produced new developer ready screens and specifications so the development team could implement with fewer questions. The work resulted in a polished new homepage and a measurable lift in new client inquiries.
+          Peak Psychological Service needed a homepage and marketing landing page that actually matched the quality of care they provide. The existing page made it hard for visitors to understand what was offered, trust the clinic, or take any next step. I led the redesign as the sole UX Designer, owning the process from early exploration through final UI and handoff. My focus was turning anxious, information-seeking visitors into confident prospective clients by clarifying offerings, strengthening trust signals, and making it easier to get in touch. I also produced developer-ready screens and specs so the team could build with fewer questions. The work resulted in a cleaner homepage and a measurable lift in new client inquiries.
         </p>
       </section>
 
@@ -160,14 +160,14 @@ export default function PeakPsychologicalContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold text-[#E05C5C] mb-2">Problem</p>
           <h2 className="font-black text-xl mb-4">What wasn't working</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            Prospective clients often arrived on the Peak Psychological Service homepage feeling uncertain, and the page did not guide them to the right service or next step. The content hierarchy made key information easy to miss, especially what the clinic offers, who it helps, and how to get started. The page also lacked enough trust building details, which mattered for a sensitive healthcare decision. As a result, visitors hesitated and the clinic missed potential inquiries.
+            Prospective clients arrived on the homepage feeling uncertain, and the page gave them little to work with. Key information was easy to miss: what the clinic offers, who it helps, and how to get started. There were not enough trust signals for a decision that is already hard to make. Visitors left without taking action, and the clinic missed potential inquiries.
           </p>
         </div>
         <div className="bg-white rounded-xl p-7 border-t-4" style={{ borderColor: ACCENT }}>
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Solution</p>
           <h2 className="font-black text-xl mb-4">How I fixed it</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            I redesigned the homepage and landing page around a clearer decision path: what Peak offers, who it is for, and how to book or contact. I introduced a stronger information hierarchy, scannable sections, and clearer calls to action so users could act without hunting. I added credibility cues — team and approach highlights, reassuring microcopy, and proof points — to reduce anxiety and increase trust. I delivered developer ready designs and handoff notes so the team could build the new experience accurately.
+            I redesigned the homepage and landing page around a clearer decision path: what Peak offers, who it is for, and how to book or contact. I introduced stronger information hierarchy, scannable sections, and clearer calls to action so users could act without hunting. I added credibility cues (team highlights, reassuring microcopy, and proof points) to reduce anxiety and build trust. I delivered developer-ready designs and handoff notes so the team could build accurately.
           </p>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function PeakPsychologicalContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Goals</p>
         <h2 className="font-black text-2xl mb-5">What success looked like</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          The clinic wanted the pages to do more than look modern, it needed to help real people take a difficult first step toward care. I aligned with stakeholders on making the page easier to scan, easier to understand, and easier to act on across devices. I also focused on building credibility quickly, since trust strongly influences whether someone reaches out for psychological services. Finally, I aimed to deliver implementation ready designs to reduce development back and forth and protect the quality of the final build.
+          The clinic wanted these pages to do more than look polished. They needed to help real people take a hard first step toward care. I worked with stakeholders to make the page easier to scan, easier to understand, and easier to act on across devices. I focused on building credibility quickly, since trust is a big part of whether someone decides to reach out. I also aimed to deliver clean, implementation-ready designs to cut down on dev back-and-forth.
         </p>
       </section>
 
@@ -197,22 +197,24 @@ export default function PeakPsychologicalContent() {
       </section>
 
       {/* ── PROCESS STEPS ── */}
-      <section className="px-11 py-12 bg-white border-b border-subtle overflow-x-auto">
-        <p className="text-[9px] uppercase tracking-widest font-semibold mb-8" style={{ color: ACCENT }}>Design Process</p>
-        <div className="flex items-start min-w-max">
-          {PROCESS_STEPS.map((label, i) => (
-            <div key={i} className="flex items-center">
-              <div className="flex flex-col items-center gap-3 w-36">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-black text-lg shadow-md" style={{ background: ACCENT }}>
-                  {i + 1}
+      <section className="px-11 py-12 bg-white border-b border-subtle">
+        <p className="text-[9px] uppercase tracking-widest font-semibold mb-8 text-center" style={{ color: ACCENT }}>Design Process</p>
+        <div className="overflow-x-auto">
+          <div className="flex items-start w-fit mx-auto">
+            {PROCESS_STEPS.map((label, i) => (
+              <div key={i} className="flex items-center">
+                <div className="flex flex-col items-center gap-3 w-36">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-black text-lg shadow-md" style={{ background: ACCENT }}>
+                    {i + 1}
+                  </div>
+                  <p className="text-[10px] text-center text-muted leading-snug px-1">{label}</p>
                 </div>
-                <p className="text-[10px] text-center text-muted leading-snug px-1">{label}</p>
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div className="h-px w-10 flex-shrink-0 mb-8" style={{ background: ACCENT, opacity: 0.3 }} />
+                )}
               </div>
-              {i < PROCESS_STEPS.length - 1 && (
-                <div className="h-px w-10 flex-shrink-0 mb-8" style={{ background: ACCENT, opacity: 0.3 }} />
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -221,9 +223,9 @@ export default function PeakPsychologicalContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-6" style={{ color: ACCENT }}>Project Goals</p>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { label: 'Goal 1', text: 'Increase homepage to inquiry conversion by improving visibility and clarity of primary calls to action.' },
-            { label: 'Goal 2', text: 'Reduce confusion by making services and next steps scannable within the first screen and key sections.' },
-            { label: 'Goal 3', text: 'Improve perceived trust and professionalism, measured through stakeholder feedback and fewer clarification questions from prospects.' },
+            { label: 'Goal 1', text: 'Increase homepage-to-inquiry conversion by making the primary calls to action clearer and easier to find.' },
+            { label: 'Goal 2', text: 'Cut confusion by making services and next steps scannable within the first screen.' },
+            { label: 'Goal 3', text: 'Build perceived trust and professionalism, validated through stakeholder feedback and fewer clarification questions from prospects.' },
           ].map(({ label, text }, i) => (
             <div key={label} className="bg-white rounded-xl p-6 shadow-sm border border-subtle flex flex-col gap-3">
               <div className="w-8 h-8 rounded-full text-white text-sm font-black flex items-center justify-center" style={{ background: ACCENT }}>
@@ -242,7 +244,7 @@ export default function PeakPsychologicalContent() {
         <h2 className="font-black text-2xl mb-5">User Journey</h2>
         <div className="max-w-2xl border-l-4 pl-6 py-1" style={{ borderColor: ACCENT }}>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The journey often started with a search like &ldquo;therapy near me&rdquo; or specific concerns, then a quick click into the homepage to judge fit within seconds. Visitors scanned for reassurance first, then looked for practical answers — what services exist, who the clinic helps, insurance accepted, and whether booking feels simple. When the page did not surface those answers quickly, users bounced or postponed the decision. I mapped this journey into a homepage flow that prioritized immediate clarity, then layered detail for those who needed more confidence before contacting the clinic.
+            The journey usually started with a search, then a quick scan of the homepage to judge fit in a matter of seconds. Visitors looked for reassurance first, then practical answers: what services are offered, who the clinic works with, whether insurance is accepted, and how easy booking is. When those answers were not easy to find, people left or put the decision off. I used that journey to shape a homepage flow that prioritized immediate clarity, then layered in detail for visitors who needed more before reaching out.
           </p>
         </div>
       </section>
@@ -284,7 +286,7 @@ export default function PeakPsychologicalContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Research</p>
           <h2 className="font-black text-2xl mb-4">Competitive Research</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            We conducted competitive research to gain insights into the features and solutions of our competitors. Identifying 4 of our direct competitors was the first step. Then we created a comparison matrix based on 45 criteria, including Nielsen&apos;s heuristics. Based on this matrix, we came up with features that positioned our product above our competitors.
+            We looked at four direct competitors and built a comparison matrix across 45 criteria, including Nielsen&apos;s heuristics. The goal was to understand what was working elsewhere so we could find the gaps and design around them.
           </p>
         </div>
       </section>
@@ -294,7 +296,7 @@ export default function PeakPsychologicalContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Design</p>
         <h2 className="font-black text-2xl mb-4">Wireframes</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-8">
-          I started with low fidelity wireframes to lock in structure before visual design, focusing on what users need to decide and where they hesitate. I explored multiple above the fold layouts to balance empathy with clarity, including variations of headline messaging, service entry points, and primary contact actions. I iterated the middle sections to support scanning, using short blocks for services, approach, and credibility cues rather than long paragraphs. Once the structure tested well in stakeholder reviews, I converted the chosen direction into detailed layouts for handoff.
+          I started with low fidelity wireframes to lock in structure before any visual decisions were made. I explored multiple above-the-fold layouts to find the right balance between empathy and clarity, testing different headline approaches, service entry points, and contact actions. The middle sections were built for scanning: short blocks for services, approach, and credibility rather than long paragraphs. Once the structure held up in stakeholder reviews, I moved into detailed layouts for handoff.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <BrowserFrame src="/images/Peak/Wireframe 1.png" alt="Wireframe 1" />
@@ -308,7 +310,7 @@ export default function PeakPsychologicalContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Final UI</p>
           <h2 className="font-black text-2xl mb-4">UI Design</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The final UI aimed to feel calm, professional, and supportive, reflecting the clinic&apos;s tone while making information easier to digest. I used clear typographic hierarchy and generous spacing so users could scan during stressful moments without feeling overwhelmed. I designed repeated, consistent calls to action (book, contact, request a consult) and placed them after key reassurance content so users could act when ready. I also introduced trust focused components, including clearer service summaries, clinician or clinic proof points, and supportive microcopy that reduced uncertainty about getting started.
+            The final UI was designed to feel calm, professional, and approachable, matching the clinic&apos;s tone while making everything easier to read. I used clear type hierarchy and generous spacing so someone in a stressful moment could scan without feeling overwhelmed. I placed consistent calls to action (book, contact, request a consult) after key reassurance content so users could act when they were ready. Trust-focused components included clearer service summaries, clinic proof points, and microcopy that made starting therapy feel less daunting.
           </p>
         </div>
         <div className="w-full md:w-2/5 flex-shrink-0 flex flex-col items-center gap-3">
@@ -330,9 +332,9 @@ export default function PeakPsychologicalContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-5" style={{ color: ACCENT }}>Learnings</p>
           <div className="flex flex-col gap-3">
             {[
-              <span key="l1">Designing for mental health contexts requires extra attention to <strong>emotional state</strong>, not just tasks and clicks.</span>,
-              <span key="l2">Small hierarchy choices (headlines, section order, and CTA placement) can change whether users feel confident enough to reach out.</span>,
-              <span key="l3">Developer ready specs and states reduce rework and protect design intent during implementation.</span>,
+              <span key="l1">Designing for mental health requires paying attention to <strong>emotional state</strong>, not just tasks and clicks.</span>,
+              <span key="l2">Small hierarchy choices, like how sections are ordered and where CTAs land, have real impact on whether someone feels ready to reach out.</span>,
+              <span key="l3">Clean specs and states up front protect design intent and prevent rework during implementation.</span>,
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 bg-white rounded-lg px-5 py-4 shadow-sm border border-subtle">
                 <span className="text-sm font-black shrink-0 mt-0.5" style={{ color: ACCENT }}>0{i + 1}</span>
@@ -345,9 +347,9 @@ export default function PeakPsychologicalContent() {
           <p className="text-[9px] uppercase tracking-widest font-semibold mb-5" style={{ color: ACCENT }}>Next Steps</p>
           <div className="flex flex-col gap-3">
             {[
-              'Run usability testing with first time visitors to validate comprehension of services and next steps within 10 seconds.',
-              'Add lightweight analytics events (CTA clicks, scroll depth, contact form starts) to isolate what drives inquiries.',
-              'Expand the redesign to service detail pages so the homepage promise matches the deeper content.',
+              'Run usability testing with first-time visitors to see how quickly they grasp the services and next steps.',
+              'Add lightweight analytics events (CTA clicks, scroll depth, form starts) to understand what drives inquiries.',
+              'Extend the redesign to service detail pages so the homepage promise carries through.',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 bg-white rounded-lg px-5 py-4 shadow-sm border border-subtle">
                 <span className="text-sm font-black shrink-0 mt-0.5" style={{ color: ACCENT }}>0{i + 1}</span>
@@ -363,9 +365,9 @@ export default function PeakPsychologicalContent() {
         <p className="text-[9px] uppercase tracking-widest font-semibold mb-2" style={{ color: ACCENT }}>Results</p>
         <h2 className="font-black text-2xl mb-5">Business Impact</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-12">
-          The redesigned homepage improved how quickly visitors understood Peak Psychological Service and what to do next, which supported the clinic&apos;s growth goals. By strengthening trust cues and clarifying the first step, the page helped more prospective clients move from browsing to contacting. The development team also benefited from clearer deliverables, which reduced implementation ambiguity and shortened feedback cycles. Overall, the new homepage contributed to an increase in new client inquiries for the clinic.
+          The redesigned homepage made it easier for visitors to understand the clinic and know what to do next. Stronger trust cues and a clearer first step helped more people move from browsing to reaching out. The development team also worked with cleaner deliverables, which cut down on back-and-forth during implementation. The homepage contributed to a meaningful increase in new client inquiries.
         </p>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { value: '18%', bold: 'increase in inquiries', rest: 'from the homepage' },
             { value: '22%', bold: 'increase in CTA clicks', rest: '(contact, booking)' },

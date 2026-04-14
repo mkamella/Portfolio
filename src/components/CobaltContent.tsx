@@ -47,7 +47,7 @@ export default function CobaltContent() {
           </h1>
           <p className="text-base font-semibold text-white/70 mb-5">Arrivia Cobalt Design System</p>
           <p className="text-sm text-white/60 leading-relaxed max-w-lg">
-            Seven platforms. One design language. Cobalt was built to unify the interfaces across all of Arrivia&apos;s products under a single, scalable design language — adopting atomic design principles and building foundational elements upward to progressively unify visual design and prioritize a consistent user experience.
+            Seven platforms. One design language. Cobalt was built to unify all of Arrivia&apos;s products under a single, scalable design system. It uses atomic design principles, building from foundational elements up to full pages to bring consistency to the whole suite.
           </p>
         </div>
         <div className="w-full md:w-[30%] flex-shrink-0">
@@ -59,7 +59,7 @@ export default function CobaltContent() {
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <h2 className="font-black text-2xl mb-5">What is a Design System?</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          A design system for a company is a comprehensive framework that encompasses a set of guidelines, principles, and assets to ensure consistency, efficiency, and a seamless user experience across all digital products and platforms. It serves as a centralized resource for design and development teams, providing a unified approach to user interface (UI) elements, interactions, and visual styles.
+          A design system is a centralized framework of guidelines, components, and assets that keeps products looking and working consistently. It gives design and development teams a shared reference point for UI elements, interactions, and visual styles, so they can move faster and produce more coherent work.
         </p>
       </section>
 
@@ -68,7 +68,7 @@ export default function CobaltContent() {
         <div className="flex-1">
           <h2 className="font-black text-2xl mb-5">Cobalt</h2>
           <p className="text-sm text-ink/70 leading-relaxed">
-            The UX team currently designs for 7+ platforms. In order to create a more cohesive goal and to &ldquo;Arrive&rdquo; the Cobalt design system was created. Cobalt adopts atomic design principles — assembling foundational elements to progressively unify our platforms and products into a seamlessly cohesive visual design, prioritizing an enhanced experience for our users.
+            The UX team was designing across 7+ platforms with no shared foundation. Cobalt was created to change that. It uses atomic design principles to assemble foundational elements into a progressively unified system, bringing visual consistency to all of Arrivia&apos;s products and improving the user experience in the process.
           </p>
         </div>
         <div className="w-full md:w-1/2 flex-shrink-0">
@@ -80,7 +80,7 @@ export default function CobaltContent() {
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <h2 className="font-black text-2xl mb-5">Why do we need Cobalt?</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          Cobalt is vital for maintaining a consistent brand identity across digital platforms. Streamlining design and development for efficiency, this design system ensures a seamless user experience, and adapts easily to scalability needs. By providing reusable components and guidelines, Cobalt not only enhances brand recognition but also facilitates the creation of visually cohesive and user-friendly digital products.
+          Cobalt keeps the brand consistent across every platform it touches. It gives designers and developers reusable components and clear guidelines, so teams can build new interfaces faster without starting from scratch. That consistency pays off in brand recognition and in a better experience for users.
         </p>
       </section>
 
@@ -108,7 +108,7 @@ export default function CobaltContent() {
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <h2 className="font-black text-2xl mb-3">The &ldquo;Atoms&rdquo;</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-8">
-          Some of the UI components the UX team and I built can be seen below. The basic atoms are the core of our design system, serving as the elemental foundation from which we construct more complex molecules, organisms, templates, and ultimately, complete pages. These atoms include buttons, form fields, and icons, encapsulates the fundamental visual and interactive building blocks of our interface.
+          Below are some of the atoms the team and I built out. Atoms are the core of the system: the smallest, most reusable pieces (buttons, form fields, icons) that everything else gets built from.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
@@ -148,7 +148,7 @@ export default function CobaltContent() {
       <section className="px-11 py-12 bg-cream border-b border-subtle">
         <h2 className="font-black text-2xl mb-5">The Continuation of Cobalt</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          This design system has allowed us to create a more cohesive brand and interface design. Cobalt still has components to be designed and we are actively working on growing this system to our first template. The end of Cobalt is not near but it is our hope that Cobalt will become a complete and fully fledged design system that unifies the interfaces at Arrivia across all products.
+          Cobalt has already brought more consistency to the brand and interface across products. There are still components to design, and the system is actively being expanded toward its first full template. The goal is a complete design system that unifies every interface at Arrivia.
         </p>
       </section>
 

@@ -85,10 +85,10 @@ export default function SVAllianceContent() {
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <h2 className="font-black text-2xl mb-5">Overview</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          The Southeast Valley Alliance is a non-profit organization based in Queen Creek, Arizona that provides community support to U.S. military veterans, active duty service members, their families, and first responders. Our team built a website to help the organization fundraise for a new community center. I inherited the project from a previous team, conducted original user research to validate and refine the existing designs, and delivered a live website built in Squarespace.
+          The Southeast Valley Alliance is a non-profit in Queen Creek, Arizona that supports U.S. military veterans, active duty service members, their families, and first responders. Our team built a website to help the organization fundraise for a new community center. I came onto the project mid-stream, conducted original user research to validate and improve the existing designs, and delivered a live site built in Squarespace.
         </p>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mt-4">
-          We conducted competitive brand related branding and initial website mockups, and performed user research and testing, plus the ability to design a website that provides the Alliance with the ability to fundraise and gain donations through Squarespace.
+          The previous team had created initial branding and mockups. My job was to validate those designs with real users, refine what needed fixing, and build and launch the final site in Squarespace.
         </p>
       </section>
 
@@ -96,7 +96,7 @@ export default function SVAllianceContent() {
       <section className="px-11 py-12 bg-[#f7f7f7] border-b border-subtle">
         <h2 className="font-black text-2xl mb-2">Prototypes</h2>
         <p className="text-sm text-ink/60 mb-8 max-w-2xl">
-          Before the project was handed off to our team, the previous group developed these initial designs. Along the project I developed and ran user testing to help determine the effectiveness of the design and what areas to improve on.
+          These are the designs the previous team handed off. My role was to test them with real users to find out what was working and what needed to change.
         </p>
         <div className="grid grid-cols-2 gap-6">
           <BrowserFrame src="/images/SEVA/1.png" alt="Prototype 1" />
@@ -116,7 +116,7 @@ export default function SVAllianceContent() {
       <section className="px-11 py-12 bg-[#f7f7f7] border-b border-subtle">
         <h2 className="font-black text-2xl mb-5">Research</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-6">
-          To get a better understanding of our target audience, we conducted a survey that went out to veterans, first responders, and regular donors. Our survey results are as follows:
+          To understand the target audience, we ran a survey targeting veterans, first responders, and regular donors. Here&apos;s what we found:
         </p>
         <ul className="flex flex-col gap-3 max-w-2xl">
           {[
@@ -151,7 +151,7 @@ export default function SVAllianceContent() {
 
         <div className="px-11 py-10 bg-white border-b border-subtle">
           <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-8">
-            We ran usability tests to gain a better understanding of how first time visitors would engage with the site — providing insights into what areas were most important to users and what needed improvement.
+            We ran usability tests to see how first-time visitors would engage with the site and find out what needed improvement.
           </p>
 
           <div className="flex flex-col gap-6">
@@ -167,18 +167,18 @@ export default function SVAllianceContent() {
               {
                 label: 'User Testing Highlight: About Us',
                 items: [
-                  'Users were able to grasp exactly who the Southeast Valley Alliance was.',
-                  'Some thought it was a recruiting agency for the military.',
-                  'There was an issue with credibility.',
-                  'Anyone can give gift should not pose as a support organization.',
+                  'Users understood who the Southeast Valley Alliance was.',
+                  'Some read the organization as a military recruiting agency, which needed to be addressed.',
+                  'Users questioned the organization\'s credibility.',
+                  'The copy needed to make clear this was a support organization, not a recruiting one.',
                 ],
               },
               {
                 label: 'User Testing Highlight: Donation Page',
                 items: [
-                  'Users want to know where the donation is going.',
-                  'More information about the donations who help decide where money is contributed.',
-                  'Majority of users understood the Alliance\'s mission.',
+                  'Users want to know exactly where their donation goes.',
+                  'More context on how donations are used would help users commit.',
+                  'Most users understood the Alliance\'s mission.',
                 ],
               },
             ].map(({ label, items }) => (
@@ -207,7 +207,7 @@ export default function SVAllianceContent() {
         </div>
         <div className="px-11 py-10 bg-white">
           <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mb-8">
-            With user tests complete, we were able to create new design solutions based on user feedback — restructuring key sections to lead with credibility signals and revising hierarchy so visitors could understand the Alliance&apos;s mission within seconds.
+            With testing done, we redesigned based on what users told us. We restructured key sections to lead with credibility and revised the page hierarchy so visitors could understand the Alliance&apos;s mission quickly.
           </p>
           <img src="/images/SEVA/8.png" alt="Our solutions" className="w-full h-auto block rounded shadow-sm" />
         </div>
@@ -217,7 +217,7 @@ export default function SVAllianceContent() {
       <section className="px-11 py-12 bg-[#f7f7f7] border-b border-subtle">
         <h2 className="font-black text-2xl mb-4">Client Meetings</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          We presented our completed designs to the Southeast Valley Alliance board members. The group gave us detailed and helpful suggestions to improve our designs to align with the app goals. We appreciated their feedback and applied it to rework the final design. With their approval we could successfully say our design met and aligned with the client&apos;s goals.
+          We presented the completed designs to the Alliance&apos;s board members. They gave detailed, helpful feedback to align the designs with their goals, which we incorporated into the final version. With their sign-off, we felt confident the design was doing its job.
         </p>
       </section>
 
@@ -225,13 +225,13 @@ export default function SVAllianceContent() {
       <section className="px-11 py-12 bg-white border-b border-subtle">
         <h2 className="font-black text-2xl mb-4">Challenges</h2>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl">
-          It is always challenging picking up a project that came from another team, especially with limited time to do so. It is important to remember the design process and not jump directly to creating solutions before the proper research is done.
+          Picking up mid-stream from another team is always tricky, especially under a tight timeline. The main thing was resisting the urge to jump into solutions before completing the research.
         </p>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mt-4">
-          Finding a suitable platform for user testing and an appropriate pool of participants was a challenge, but we still managed to gather an adequate amount of feedback.
+          Finding the right testing platform and the right participants was harder than expected, but we gathered enough useful feedback to move forward with confidence.
         </p>
         <p className="text-sm text-ink/70 leading-relaxed max-w-2xl mt-4">
-          Finally, it was challenging building a site for the vision of the client as this type of site can have the potential to have biases in the user experience.
+          Designing for a cause like this also carries the risk of bias creeping into the UX. We tried to stay grounded in what the research told us rather than our own assumptions.
         </p>
       </section>
 
@@ -240,9 +240,9 @@ export default function SVAllianceContent() {
         <h2 className="font-black text-2xl mb-5">What We Learned</h2>
         <ul className="flex flex-col gap-3 max-w-2xl">
           {[
-            'It is always important to go through the proper user research and learning.',
-            'Research validated that credibility and trust are the primary drivers for donation decisions.',
-            'Most importantly we learned how to work directly with clients and make compromises based on their feedback.',
+            'Skipping research, even when you\'re under pressure, costs more time than it saves.',
+            'Credibility and trust are what move donors to act. The research confirmed it.',
+            'Working directly with clients and incorporating their feedback is its own skill. This project sharpened that.',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-ink/70 list-none">
               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1C2B4A] flex-shrink-0" />
