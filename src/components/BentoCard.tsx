@@ -8,9 +8,10 @@ interface BentoCardProps {
   caseStudy: CaseStudy
   index: number
   isLarge?: boolean
+  objectPosition?: string
 }
 
-export default function BentoCard({ caseStudy, index, isLarge = false }: BentoCardProps) {
+export default function BentoCard({ caseStudy, index, isLarge = false, objectPosition = 'center' }: BentoCardProps) {
   const num = String(index + 1).padStart(2, '0')
   const tags = caseStudy.tags.slice(0, 2).join(' · ')
 
@@ -31,6 +32,7 @@ export default function BentoCard({ caseStudy, index, isLarge = false }: BentoCa
           src={caseStudy.thumbnail}
           alt={caseStudy.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={{ objectPosition }}
         />
 
         {/* Gradient overlay — stronger at bottom for legibility */}

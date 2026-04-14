@@ -91,8 +91,8 @@ export default function LeftPanel({ activeSection, footer }: LeftPanelProps) {
                 href={href}
                 className={`transition-all duration-300 leading-none ${
                   isActive
-                    ? 'text-ink font-black text-sm'
-                    : 'text-muted text-[10px] hover:text-ink'
+                    ? 'text-ink font-black text-base'
+                    : 'text-muted text-xs hover:text-ink'
                 }`}
               >
                 <span className="text-subtle text-[8px] mr-1.5">{num}</span>

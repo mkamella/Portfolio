@@ -148,7 +148,7 @@ export default function ArriviaContent() {
             See Final Results ↓
           </a>
         </div>
-        <div className="w-full md:w-[22%] flex-shrink-0">
+        <div className="w-[45%] mx-auto md:mx-0 md:w-[22%] flex-shrink-0">
           <img src="/images/Arrivia/header 2.png" alt="Arrivia" className="w-full h-auto block" />
         </div>
       </section>

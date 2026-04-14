@@ -249,8 +249,8 @@ export default function HomePage() {
               {/* Mobile: single column */}
               <div className="flex flex-col gap-4 md:hidden">
                 {caseStudies.map((cs, i) => (
-                  <div key={cs.slug} className="h-64">
-                    <BentoCard caseStudy={cs} index={i} />
+                  <div key={cs.slug} className="h-80">
+                    <BentoCard caseStudy={cs} index={i} objectPosition={i === 3 ? 'top' : 'center'} />
                   </div>
                 ))}
               </div>
@@ -258,14 +258,14 @@ export default function HomePage() {
               {/* Desktop: bento grid */}
               <div
                 className="hidden md:grid grid-cols-3 gap-4"
-                style={{ gridTemplateRows: '320px 320px 260px' }}
+                style={{ gridTemplateRows: '360px 360px 300px' }}
               >
                 <div className="col-span-2 row-span-2">
                   <BentoCard caseStudy={caseStudies[0]} index={0} isLarge />
                 </div>
                 <BentoCard caseStudy={caseStudies[1]} index={1} />
                 <BentoCard caseStudy={caseStudies[2]} index={2} />
-                <BentoCard caseStudy={caseStudies[3]} index={3} />
+                <BentoCard caseStudy={caseStudies[3]} index={3} objectPosition="top" />
                 <div className="col-span-2">
                   <BentoCard caseStudy={caseStudies[4]} index={4} />
                 </div>
@@ -316,7 +316,7 @@ export default function HomePage() {
               download
               className="inline-flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider border border-white/30 px-6 py-3 rounded hover:bg-white hover:text-hero-blue transition-colors w-fit"
             >
-              Download Resume ↓
+              Download My Resume ↓
             </a>
           </section>
         </>
