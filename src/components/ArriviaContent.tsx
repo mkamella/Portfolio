@@ -34,50 +34,50 @@ function OriginalWebsiteCarousel() {
   const slide = ORIGINAL_SLIDES[index]
 
   return (
-    <div className="flex flex-col items-center gap-4 max-w-5xl mx-auto">
-      <div className="flex items-center gap-3 w-full">
-        <button
-          onClick={() => setIndex((i) => (i - 1 + ORIGINAL_SLIDES.length) % ORIGINAL_SLIDES.length)}
-          className="shrink-0 w-9 h-9 rounded-full border border-subtle bg-white shadow flex items-center justify-center hover:bg-cream transition-colors text-sm"
-          aria-label="Previous"
-        >←</button>
-
-        <div className="flex-1 flex flex-col items-center">
-          <div className="w-full rounded-2xl border-[8px] border-[#c8c8c8] bg-[#c8c8c8] shadow-2xl">
-            <div className="w-full bg-white rounded-lg overflow-y-auto" style={{ height: 560 }}>
-              <img src={slide.src} alt={slide.label} className="w-full h-auto block" />
-            </div>
+    <div className="flex flex-col items-center gap-4 w-full max-w-5xl mx-auto">
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full rounded-2xl border-[8px] border-[#c8c8c8] bg-[#c8c8c8] shadow-2xl">
+          <div className="w-full bg-white rounded-lg overflow-y-auto aspect-video md:aspect-auto md:h-[560px]">
+            <img src={slide.src} alt={slide.label} className="w-full h-auto block" />
           </div>
-          <div className="w-full h-5 bg-[#d4d4d4] rounded-b-2xl -mt-1" />
-          <div className="bg-[#c0c0c0]" style={{ width: 60, height: 30, clipPath: 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)' }} />
-          <div className="h-2.5 bg-[#b8b8b8] rounded-full" style={{ width: 160 }} />
         </div>
-
-        <button
-          onClick={() => setIndex((i) => (i + 1) % ORIGINAL_SLIDES.length)}
-          className="shrink-0 w-9 h-9 rounded-full border border-subtle bg-white shadow flex items-center justify-center hover:bg-cream transition-colors text-sm"
-          aria-label="Next"
-        >→</button>
+        <div className="w-full h-5 bg-[#d4d4d4] rounded-b-2xl -mt-1" />
+        <div className="bg-[#c0c0c0]" style={{ width: 60, height: 30, clipPath: 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)' }} />
+        <div className="h-2.5 bg-[#b8b8b8] rounded-full" style={{ width: 160 }} />
       </div>
 
       <p className="text-sm font-medium text-ink">{slide.label}</p>
 
-      <div className="flex gap-3">
-        {ORIGINAL_SLIDES.map((s, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-14 h-9 rounded overflow-hidden border-2 transition-all ${i === index ? 'border-ink' : 'border-transparent opacity-50 hover:opacity-75'}`}
-          >
-            <img src={s.src} alt={s.label} className="w-full h-full object-cover object-top" />
-          </button>
-        ))}
+      <div className="flex items-center gap-4">
+        <button
+          onClick={() => setIndex((i) => (i - 1 + ORIGINAL_SLIDES.length) % ORIGINAL_SLIDES.length)}
+          className="w-9 h-9 rounded-full border border-subtle bg-white shadow flex items-center justify-center hover:bg-cream transition-colors text-sm"
+          aria-label="Previous"
+        >←</button>
+
+        <div className="flex gap-3">
+          {ORIGINAL_SLIDES.map((s, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`w-14 h-9 rounded overflow-hidden border-2 transition-all ${i === index ? 'border-ink' : 'border-transparent opacity-50 hover:opacity-75'}`}
+            >
+              <img src={s.src} alt={s.label} className="w-full h-full object-cover object-top" />
+            </button>
+          ))}
+        </div>
+
+        <button
+          onClick={() => setIndex((i) => (i + 1) % ORIGINAL_SLIDES.length)}
+          className="w-9 h-9 rounded-full border border-subtle bg-white shadow flex items-center justify-center hover:bg-cream transition-colors text-sm"
+          aria-label="Next"
+        >→</button>
       </div>
     </div>
   )
 }
 
-function BrowserFrame({ src, alt, height = 520 }: { src: string; alt: string; height?: number }) {
+function BrowserFrame({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="rounded-xl overflow-hidden shadow-2xl border border-black/10 w-full">
       <div className="bg-[#E2E2E2] px-4 py-2.5 flex items-center gap-3">
@@ -90,7 +90,7 @@ function BrowserFrame({ src, alt, height = 520 }: { src: string; alt: string; he
           <span className="text-[9px] text-gray-400 truncate">arrivia.com</span>
         </div>
       </div>
-      <div className="overflow-y-auto bg-white" style={{ height }}>
+      <div className="overflow-y-auto bg-white aspect-video md:aspect-auto md:h-[520px]">
         <img src={src} alt={alt} className="w-full h-auto block" />
       </div>
     </div>
